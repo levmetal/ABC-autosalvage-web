@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/layout/Header';
+import { HeroVisual } from '../features/hero/HeroVisual';
+import TrustMarquee from '../features/trust/TrustMarquee.astro';
+import { StickyWorkflow } from '../features/how-it-works/StickyWorkflow';
+import { ReverseCatalogGrid } from '../features/catalog/ReverseCatalogGrid';
+import { FooterCTA } from '../components/layout/FooterCTA';
+import { FloatingWhatsApp } from '../components/layout/FloatingWhatsApp';
+import { QuoteModal } from '../features/quote/QuoteModal';
+---
+
+<Layout title="ABC Autosalvage | Sell Your Car for Cash Instantly">
+  
+  <Header client:load />
+
+  <main>
+    <HeroVisual client:load />
+    <TrustMarquee />
+    <div id="process"><StickyWorkflow client:load /></div>
+    <div id="inventory"><ReverseCatalogGrid client:visible /></div>
+  </main>
+  
+  <FooterCTA client:visible />
+  <FloatingWhatsApp client:load />
+
+  {/* Global Modal Layer Layer */}
+  <QuoteModal client:load />
+
+</Layout>

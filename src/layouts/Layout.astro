@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Your car. Our cash. In 24 hours. We turn any vehicle, in any condition, into instant money. No stress, no middlemen." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Custom Fonts from Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+		
+		<title>{title}</title>
+	</head>
+	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-accent-blue)] selection:text-black">
+		<slot />
+
+		<script>
+			// Initialize GSAP ScrollTrigger and Lenis across the app
+			import { initLenis } from '../utils/lenis-manager';
+			import gsap from 'gsap';
+			import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+			gsap.registerPlugin(ScrollTrigger);
+			initLenis();
+
+			// Sync GSAP with Lenis
+			// When Lenis runs, it updates the window scroll position, ScrollTrigger needs to update.
+			import { lenis } from '../utils/lenis-manager';
+			
+			if (lenis) {
+				lenis.on('scroll', ScrollTrigger.update);
+				gsap.ticker.add((time)=>{
+				  lenis.raf(time * 1000)
+				})
+				gsap.ticker.lagSmoothing(0)
+			}
+		</script>
+	</body>
+</html>
