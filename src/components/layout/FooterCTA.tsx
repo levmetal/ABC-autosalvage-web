@@ -41,18 +41,18 @@ export const FooterCTA: React.FC = () => {
         <div className="max-w-4xl mx-auto flex flex-col items-center pt-16 pb-12">
           
           {/* Logo - Central focus */}
-          <div className="mb-10 transition-transform duration-500 hover:scale-105">
+          <a href="/" className="mb-10 transition-transform duration-500 hover:scale-105">
             <img
               src={logo.src}
               alt="ABC Autosalvage Logo"
               className="h-9 md:h-12 w-auto object-contain opacity-90"
             />
-          </div>
+          </a>
 
           {/* Navigation Links - Clean horizontal list */}
           <nav className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 mb-10">
-            <a href="#" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-accent-emerald)] transition-all duration-300">Privacy Policy</a>
-            <a href="#" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-accent-emerald)] transition-all duration-300">Terms of Service</a>
+            <a href="/privacy-policy" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-accent-emerald)] transition-all duration-300">Privacy Policy</a>
+            <a href="/terms-of-service" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-accent-emerald)] transition-all duration-300">Terms of Service</a>
             <a href="#location" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-accent-emerald)] transition-all duration-300">Contact</a>
           </nav>
 
