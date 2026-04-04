@@ -83,16 +83,17 @@ export const HeroVisual: React.FC = () => {
       id="hero"
       className="relative min-h-[85vh] pt-20 pb-16 lg:pt-28 px-6 xl:px-12 flex items-center bg-[#050608] overflow-hidden"
     >
-      {/* Dynamic Background Image - Using the project's official branded background */}
+      {/* Dynamic Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat grayscale mix-blend-luminosity opacity-[0.20] will-change-transform"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg.src})` }}
       >
-        <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-5"></div>
+        <div className="absolute inset-0 bg-[#050608]/40"></div>
+        <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-[0.04]"></div>
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/90 to-[#050608]/30 z-0 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050608] via-transparent to-transparent z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/70 to-transparent z-0 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050608] to-transparent z-0 pointer-events-none"></div>
 
       <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10 items-center min-h-[60vh]">
         
@@ -125,8 +126,8 @@ export const HeroVisual: React.FC = () => {
           {/* Metrics Row */}
           <div ref={metricsRef} className="grid grid-cols-2 md:flex md:flex-wrap gap-8 md:gap-16 pt-12 border-t border-white/10">
             <div className="flex flex-col items-center lg:items-start">
-              <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">Instant</p>
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Cash Offer</p>
+              <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">$1,200+</p>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Avg. Offer</p>
             </div>
             <div className="flex flex-col items-center lg:items-start">
               <p className="text-2xl font-heading font-black text-white uppercase tracking-tight">24h</p>
@@ -158,7 +159,7 @@ export const HeroVisual: React.FC = () => {
                    </div>
                    <div>
                      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Average Offer</p>
-                     <p className="text-2xl font-heading font-black text-white leading-none">$4,500 <span className="text-xs text-gray-400">USD</span></p>
+                      <p className="text-2xl font-heading font-black text-white leading-none">$1,200+ <span className="text-xs text-gray-400">USD</span></p>
                    </div>
                  </div>
 

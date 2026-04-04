@@ -23,6 +23,21 @@
     font-family: var(--font-heading);
     font-weight: 600;
   }
+
+  /* Force white text on all form inputs — overrides browser autofill defaults */
+  input, textarea, select {
+    color: #FFFFFF !important;
+    caret-color: #FFFFFF;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #6B7280 !important;
+  }
+
+  select option {
+    background-color: #141822 !important;
+    color: #FFFFFF !important;
+  }
 }
 
 /* Lenis smooth scrolling defaults */

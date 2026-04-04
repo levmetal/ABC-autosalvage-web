@@ -149,7 +149,7 @@ export const LocationSection: React.FC = () => {
               href="https://www.google.com/maps/search/?api=1&query=15346+Blue+Star+Hwy+Stony+Creek+VA+23882"
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-8 inline-flex items-center gap-3 px-8 py-4 border border-[var(--color-accent-emerald)]/30 rounded-full hover:bg-[var(--color-accent-emerald)]/10 hover:border-[var(--color-accent-emerald)] transition-all duration-300 self-start"
+              className="group mt-8 inline-flex items-center justify-center gap-3 px-8 py-4 border border-[var(--color-accent-emerald)]/30 rounded-full hover:bg-[var(--color-accent-emerald)]/10 hover:border-[var(--color-accent-emerald)] transition-all duration-300 self-start sm:self-center lg:self-start w-full sm:w-auto"
             >
               <span className="text-sm font-heading font-bold uppercase tracking-widest text-[var(--color-accent-emerald)]">
                 Get Directions
