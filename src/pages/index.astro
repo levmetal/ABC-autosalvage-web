@@ -4,10 +4,12 @@ import { Header } from '../components/layout/Header';
 import { HeroVisual } from '../features/hero/HeroVisual';
 import TrustMarquee from '../features/trust/TrustMarquee.astro';
 import { StickyWorkflow } from '../features/how-it-works/StickyWorkflow';
-import { ReverseCatalogGrid } from '../features/catalog/ReverseCatalogGrid';
+import { VehicleCarousel3D } from '../features/catalog/VehicleCarousel3D';
+import { LocationSection } from '../features/location/LocationSection';
+import { FAQSection } from '../features/faq/FAQSection';
 import { FooterCTA } from '../components/layout/FooterCTA';
-import { FloatingWhatsApp } from '../components/layout/FloatingWhatsApp';
 import { QuoteModal } from '../features/quote/QuoteModal';
+import { MobileStickyCTA } from '../components/layout/MobileStickyCTA';
 ---
 
 <Layout title="ABC Autosalvage | Sell Your Car for Cash Instantly">
@@ -17,14 +19,24 @@ import { QuoteModal } from '../features/quote/QuoteModal';
   <main>
     <HeroVisual client:load />
     <TrustMarquee />
-    <div id="process"><StickyWorkflow client:load /></div>
-    <div id="inventory"><ReverseCatalogGrid client:visible /></div>
+    
+    {/* Cinematic 3D Cover Flow Scroll */}
+    <VehicleCarousel3D client:load />
+
+    {/* The Frictionless Workflow */}
+    <StickyWorkflow client:load />
+
+    {/* Location & Contact */}
+    <LocationSection client:visible />
+
+    {/* Frequently Asked Questions */}
+    <FAQSection client:visible />
   </main>
   
   <FooterCTA client:visible />
-  <FloatingWhatsApp client:load />
 
-  {/* Global Modal Layer Layer */}
+  {/* Global UI Layers */}
+  <MobileStickyCTA client:load />
   <QuoteModal client:load />
 
 </Layout>

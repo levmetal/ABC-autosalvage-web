@@ -4,9 +4,135 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	url?: string;
 }
 
-const { title, description = "Your car. Our cash. In 24 hours. We turn any vehicle, in any condition, into instant money. No stress, no middlemen." } = Astro.props;
+const { 
+	title, 
+	description = "ABC Autosalvage buys vehicles in any condition — wrecked, running, or dead. Get a free cash offer in minutes with free towing across Virginia. Call (757) 633-1779.", 
+	image = "/og-image.svg",
+	url = "https://abc-autosalvage.com"
+} = Astro.props;
+
+const siteUrl = import.meta.env.SITE || "https://abc-autosalvage.com";
+const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
+const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "ABC Autosalvage",
+  "alternateName": "ABC Auto Salvage",
+  "image": imageUrl,
+  "url": siteUrl,
+  "telephone": "+1-757-633-1779",
+  "email": "Angel@abc-autosalvage.com",
+  "description": "We buy vehicles in any condition — wrecked, running, high mileage, or non-starting. Free towing and same-day cash payment across Virginia.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15346 Blue Star Hwy",
+    "addressLocality": "Stony Creek",
+    "addressRegion": "VA",
+    "postalCode": "23882",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.9012,
+    "longitude": -77.3967
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "State",
+    "name": "Virginia"
+  },
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Vehicle Purchase Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cash for Wrecked Cars"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cash for Non-Running Vehicles"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cash for High Mileage Cars"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Free Vehicle Towing"
+        }
+      }
+    ]
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ABC Autosalvage",
+  "url": siteUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ABC Autosalvage",
+  "image": imageUrl,
+  "telephone": "+1-757-633-1779",
+  "email": "Angel@abc-autosalvage.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15346 Blue Star Hwy",
+    "addressLocality": "Stony Creek",
+    "addressRegion": "VA",
+    "postalCode": "23882",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.9012,
+    "longitude": -77.3967
+  },
+  "url": siteUrl,
+  "priceRange": "$$"
+};
 ---
 
 <!doctype html>
@@ -15,8 +141,43 @@ const { title, description = "Your car. Our cash. In 24 hours. We turn any vehic
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- ==================== OPEN GRAPH (Facebook, LinkedIn, etc.) ==================== -->
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="ABC Autosalvage" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={imageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="ABC Autosalvage - Cash for Cars in Virginia" />
+
+		<!-- ==================== TWITTER CARD ==================== -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={imageUrl} />
+
+		<!-- ==================== AI INDEXING (ChatGPT, Gemini, Perplexity) ==================== -->
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+		
+		<!-- AI-specific metadata for LLM crawlers -->
+		<meta name="author" content="ABC Autosalvage" />
+		<meta name="keywords" content="cash for cars Virginia, junk car buyer Stony Creek, sell my car fast, wrecked car buyer, free car towing Virginia, ABC Autosalvage, scrap car cash, auto salvage Virginia, we buy cars any condition, cash for junk cars near me" />
+
+		<!-- ==================== GEO TARGETING ==================== -->
+		<meta name="geo.region" content="US-VA" />
+		<meta name="geo.placename" content="Stony Creek" />
+		<meta name="geo.position" content="36.9012;-77.3967" />
+		<meta name="ICBM" content="36.9012, -77.3967" />
 		
 		<!-- Custom Fonts from Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +185,13 @@ const { title, description = "Your car. Our cash. In 24 hours. We turn any vehic
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 		
 		<title>{title}</title>
+
+		<!-- ==================== SCHEMA.ORG JSON-LD ==================== -->
+		<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 	</head>
-	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-accent-blue)] selection:text-black">
+	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-accent-emerald)] selection:text-black">
 		<slot />
 
 		<script>
