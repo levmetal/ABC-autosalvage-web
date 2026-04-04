@@ -9,7 +9,7 @@ export const FooterCTA: React.FC = () => {
       {/* Immersive glowing background behind text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-gradient-radial from-[var(--color-accent-emerald)]/20 to-transparent blur-[100px] pointer-events-none rounded-full" />
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto mb-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black uppercase tracking-[-0.03em] text-white leading-[1.1] mb-12">
           READY TO FREE UP SPACE AND FILL YOUR WALLET?
         </h2>
@@ -32,17 +32,17 @@ export const FooterCTA: React.FC = () => {
         </p>
       </div>
 
-      {/* Footer Branding & Social */}
-      <footer className="absolute bottom-8 left-0 right-0 px-12 flex flex-col items-center gap-4 z-10">
-        <div className="flex flex-col items-center gap-4">
+      {/* Footer Branding & Social - Relative positioning for better flow */}
+      <footer className="w-full mt-auto px-6 lg:px-12 flex flex-col items-center gap-8 z-10 border-t border-white/5 pt-12 pb-8">
+        <div className="flex flex-col items-center gap-6 w-full max-w-5xl">
           <img
             src={logo.src}
             alt="ABC Autosalvage Logo"
             className="h-12 w-auto object-contain opacity-70"
           />
-          <div className="flex justify-between w-full max-w-5xl text-gray-400 text-sm font-medium">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full text-gray-400 text-xs font-bold uppercase tracking-widest gap-4">
             <span>© {new Date().getFullYear()} ABC Autosalvage.</span>
-            <div className="flex gap-6">
+            <div className="flex gap-8">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>
             </div>

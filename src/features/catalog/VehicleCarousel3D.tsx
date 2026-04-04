@@ -121,19 +121,19 @@ export const VehicleCarousel3D: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="inventory" className="h-[350vh] bg-[#050608] relative">
+    <section ref={sectionRef} id="inventory" className="h-[200vh] md:h-[350vh] bg-[#050608] relative">
       <div 
         ref={containerRef} 
-        className="h-screen w-full sticky top-0 flex flex-col items-center justify-start pt-12 md:pt-16 overflow-hidden"
+        className="h-screen w-full sticky top-0 flex flex-col items-center justify-start pt-28 md:pt-16 overflow-hidden"
       >
         {/* Background Ambient */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-[var(--color-accent-emerald)] rounded-full blur-[200px] opacity-[0.05] pointer-events-none"></div>
 
         {/* Section Header */}
-        <div className="relative z-50 text-center px-4 mb-6 md:mb-8 pointer-events-none">
+        <div className="relative z-50 text-center px-4 mb-4 md:mb-8 pointer-events-none">
            <h2 className="text-[10px] font-bold tracking-widest text-[var(--color-accent-emerald)] uppercase mb-2 font-heading">What We Buy</h2>
-           <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-black uppercase tracking-tight text-white leading-tight">
+           <h3 className="text-xl md:text-3xl lg:text-4xl font-heading font-black uppercase tracking-tight text-white leading-tight">
              If it has an engine, <br className="hidden md:block" />
              <span className="text-gray-400 line-through decoration-[var(--color-accent-emerald)] decoration-4 mr-2">we want it.</span>
              <span className="text-white">we'll buy it.</span>
@@ -141,13 +141,13 @@ export const VehicleCarousel3D: React.FC = () => {
         </div>
 
         {/* 3D Carousel Stage - Heavily adjusted for miniaturization */}
-        <div className="relative w-full max-w-[1200px] h-[400px] flex items-center justify-center mt-0 md:mt-2" style={{ perspective: '1200px' }}>
+        <div className="relative w-full max-w-[1200px] h-[450px] md:h-[500px] flex items-center justify-center mt-2 md:mt-2" style={{ perspective: '1200px' }}>
           {vehicles.map((vehicle, i) => (
             <div 
               key={vehicle.id}
               ref={el => { cardsRef.current[i] = el; }}
               onClick={() => window.dispatchEvent(new CustomEvent('open-quote-modal'))}
-              className="absolute w-[220px] sm:w-[280px] aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col bg-black will-change-transform cursor-pointer group"
+              className="absolute w-[240px] sm:w-[280px] aspect-[3/4.5] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col bg-black will-change-transform cursor-pointer group"
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Image */}

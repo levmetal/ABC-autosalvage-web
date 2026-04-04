@@ -31,27 +31,27 @@ export const Header: React.FC = () => {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-full">
         
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <img 
             src={logo.src} 
             alt="ABC Autosalvage Logo" 
-            className="h-14 w-auto object-contain"
+            className="h-8 md:h-12 w-auto object-contain"
           />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="#inventory" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Inventory</a>
-          <a href="#process" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Process</a>
-          <a href="#hero" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Valuation</a>
-          <a href="#location" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Location</a>
+        <nav className="hidden md:flex items-center gap-10">
+          <a href="#inventory" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Inventory</a>
+          <a href="#process" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Process</a>
+          <a href="#hero" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Valuation</a>
+          <a href="#location" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Location</a>
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <a 
             href="tel:17576331779"
             aria-label="Call ABC Autosalvage directly"

@@ -81,11 +81,11 @@ export const HeroVisual: React.FC = () => {
     <section 
       ref={containerRef}
       id="hero"
-      className="relative min-h-[85vh] pt-28 pb-16 lg:pt-40 px-6 xl:px-12 flex items-center bg-[#050608] overflow-hidden"
+      className="relative min-h-[85vh] pt-20 pb-16 lg:pt-28 px-6 xl:px-12 flex items-center bg-[#050608] overflow-hidden"
     >
       {/* Dynamic Background Image - Using the project's official branded background */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat grayscale mix-blend-luminosity opacity-[0.12] will-change-transform"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat grayscale mix-blend-luminosity opacity-[0.20] will-change-transform"
         style={{ backgroundImage: `url(${heroBg.src})` }}
       >
         <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-5"></div>
@@ -94,13 +94,13 @@ export const HeroVisual: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/90 to-[#050608]/30 z-0 pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#050608] via-transparent to-transparent z-0 pointer-events-none"></div>
 
-      <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10 items-center">
+      <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10 items-center min-h-[60vh]">
         
         {/* Left Column - Typography & Metrics */}
-        <div className="lg:col-span-8 flex flex-col justify-center">
+        <div className="lg:col-span-8 flex flex-col justify-center text-center lg:text-left">
           
-          <div className="mb-10">
-            <span className="inline-block border border-[var(--color-accent-emerald)]/40 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-emerald)] backdrop-blur-md bg-[var(--color-accent-emerald)]/10">
+          <div className="mb-8 flex justify-center lg:justify-start">
+            <span className="inline-block border border-[var(--color-accent-emerald)]/20 rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent-emerald)] backdrop-blur-md bg-[var(--color-accent-emerald)]/5">
               Precision Liquidation Platform
             </span>
           </div>
@@ -111,28 +111,28 @@ export const HeroVisual: React.FC = () => {
             </h1>
           </div>
           <div className="overflow-hidden pb-4">
-            <h1 ref={title2Ref} className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] font-heading font-black uppercase tracking-tight text-[var(--color-accent-emerald)] flex items-center gap-4">
+            <h1 ref={title2Ref} className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] font-heading font-black uppercase tracking-tight text-[var(--color-accent-emerald)] flex justify-center lg:justify-start items-baseline gap-1">
               Car Today<span className="text-[var(--color-accent-emerald)]">.</span>
             </h1>
           </div>
           
-          <div className="overflow-hidden mt-4 mb-8">
-            <p ref={subtitleRef} className="text-sm md:text-lg text-gray-400 max-w-2xl font-body font-normal leading-relaxed">
+          <div className="overflow-hidden mt-4 mb-12">
+            <p ref={subtitleRef} className="text-sm md:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 font-body font-normal leading-relaxed">
               No Questions, No Stress. We buy cars in any condition. Get an offer in 90 seconds. Precision engineering meets seamless liquidation.
             </p>
           </div>
 
           {/* Metrics Row */}
-          <div ref={metricsRef} className="flex flex-wrap gap-10 md:gap-16 pt-8 border-t border-white/10">
-            <div>
+          <div ref={metricsRef} className="grid grid-cols-2 md:flex md:flex-wrap gap-8 md:gap-16 pt-12 border-t border-white/10">
+            <div className="flex flex-col items-center lg:items-start">
               <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">90s</p>
               <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Fastest Valuation</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center lg:items-start">
               <p className="text-2xl font-heading font-black text-white uppercase tracking-tight">24h</p>
               <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Payout Window</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center lg:items-start col-span-2 md:col-span-1">
               <p className="text-2xl font-heading font-black text-white uppercase tracking-tight">100%</p>
               <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Towing Covered</p>
             </div>

@@ -167,8 +167,8 @@ export const StickyWorkflow: React.FC = () => {
             ))}
           </div>
           
-          {/* Spacer to allow scrolling past the last item */}
-          <div className="h-[25vh]"></div>
+          {/* Spacer to allow scrolling past the last item - Reduced for mobile */}
+          <div className="h-[10vh] lg:h-[25vh]"></div>
         </div>
 
       </div>
