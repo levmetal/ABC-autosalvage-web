@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent-blue: #00F0FF; /* Electric Blue */
-  --color-accent-blue-hover: #00D0E0;
+  --color-accent-emerald: #00E676; /* Emerald Green */
+  --color-accent-emerald-hover: #00C853;
   --color-base: #0B0E14; /* Deep dark background */
   --color-base-surface: #141822;
   --color-base-border: #212634;

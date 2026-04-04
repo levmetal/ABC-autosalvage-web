@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Phone } from 'lucide-react';
+import logo from '../../assets/images/branding/Logo.png';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,28 +35,31 @@ export const Header: React.FC = () => {
         
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <span className="font-heading font-black uppercase tracking-[-0.03em] text-2xl text-white">
-            ABC<span className="text-[var(--color-accent-blue)]">Autosalvage</span>
-          </span>
+          <img 
+            src={logo.src} 
+            alt="ABC Autosalvage Logo" 
+            className="h-10 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#inventory" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-blue)] pb-1">Inventory</a>
-          <a href="#process" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-blue)] pb-1">Process</a>
-          <a href="#hero" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-blue)] pb-1">Valuation</a>
+          <a href="#inventory" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Inventory</a>
+          <a href="#process" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Process</a>
+          <a href="#hero" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Valuation</a>
+          <a href="#location" className="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Location</a>
         </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-4">
           <a 
-            href="tel:18005550199"
+            href="tel:17576331779"
             aria-label="Call ABC Autosalvage directly"
-            className="group flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full hover:border-[var(--color-accent-blue)]/50 transition-colors"
+            className="group flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full hover:border-[var(--color-accent-emerald)]/50 transition-colors"
           >
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-accent-blue)]/10">
-              <div className="absolute w-full h-full rounded-full bg-[var(--color-accent-blue)] opacity-20 group-hover:animate-ping"></div>
-              <Phone className="w-4 h-4 text-[var(--color-accent-blue)] relative z-10" />
+            <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-accent-emerald)]/10">
+              <div className="absolute w-full h-full rounded-full bg-[var(--color-accent-emerald)] opacity-20 group-hover:animate-ping"></div>
+              <Phone className="w-4 h-4 text-[var(--color-accent-emerald)] relative z-10" />
             </div>
             <span className="font-heading font-bold uppercase tracking-wide text-sm text-gray-300 group-hover:text-white transition-colors relative z-10 hidden sm:block">
               Call Now
@@ -65,7 +69,7 @@ export const Header: React.FC = () => {
           {/* Dynamic Scroll CTA */}
           <button 
             onClick={handleOpenModal}
-            className={`hidden sm:block overflow-hidden transition-all duration-500 ease-out bg-[var(--color-accent-blue)] text-black font-heading font-black uppercase tracking-wider text-sm rounded-full px-6 whitespace-nowrap hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:scale-105 ${
+            className={`hidden sm:block overflow-hidden transition-all duration-500 ease-out bg-[var(--color-accent-emerald)] text-black font-heading font-black uppercase tracking-wider text-sm rounded-full px-6 whitespace-nowrap hover:shadow-[0_0_20px_rgba(0,230,118,0.4)] hover:scale-105 ${
               showCTA ? 'max-w-[200px] opacity-100 py-3 ml-2' : 'max-w-0 opacity-0 py-0 ml-0 border-0 p-0'
             }`}
           >
