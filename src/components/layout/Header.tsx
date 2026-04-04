@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Phone } from 'lucide-react';
+import { Phone, Menu } from 'lucide-react';
 import logo from '../../assets/images/branding/Logo.png';
 
 export const Header: React.FC = () => {
@@ -44,27 +44,32 @@ export const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-10">
-          <a href="#inventory" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Inventory</a>
-          <a href="#process" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Process</a>
-          <a href="#hero" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Valuation</a>
-          <a href="#location" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Location</a>
+          <a href="#inventory" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">What We Buy</a>
+          <a href="#process" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">How It Works</a>
+          <a href="#faq" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">FAQ</a>
+          <a href="#location" className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors border-b-2 border-transparent hover:border-[var(--color-accent-emerald)] pb-1">Find Us</a>
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 md:gap-6">
           <a 
             href="tel:17576331779"
             aria-label="Call ABC Autosalvage directly"
-            className="group flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full hover:border-[var(--color-accent-emerald)]/50 transition-colors"
+            className="group flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 border border-white/10 rounded-full hover:border-[var(--color-accent-emerald)]/50 transition-colors"
           >
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-accent-emerald)]/10">
+            <div className="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-[var(--color-accent-emerald)]/10">
               <div className="absolute w-full h-full rounded-full bg-[var(--color-accent-emerald)] opacity-20 group-hover:animate-ping"></div>
-              <Phone className="w-4 h-4 text-[var(--color-accent-emerald)] relative z-10" />
+              <Phone className="w-3 h-3 md:w-4 md:h-4 text-[var(--color-accent-emerald)] relative z-10" />
             </div>
-            <span className="font-heading font-bold uppercase tracking-wide text-sm text-gray-300 group-hover:text-white transition-colors relative z-10 hidden sm:block">
+            <span className="font-heading font-bold uppercase tracking-wide text-[10px] md:text-sm text-gray-300 group-hover:text-white transition-colors relative z-10 hidden sm:block">
               Call Now
             </span>
           </a>
+
+          {/* Simple Mobile Menu Trigger - Aesthetic only for now */}
+          <button className="md:hidden text-gray-400 p-1">
+            <Menu className="w-6 h-6" />
+          </button>
 
           {/* Dynamic Scroll CTA */}
           <button 
@@ -81,3 +86,4 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+
