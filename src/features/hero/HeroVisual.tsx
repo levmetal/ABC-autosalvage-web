@@ -118,15 +118,15 @@ export const HeroVisual: React.FC = () => {
           
           <div className="overflow-hidden mt-4 mb-12">
             <p ref={subtitleRef} className="text-sm md:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 font-body font-normal leading-relaxed">
-              No Questions, No Stress. We buy cars in any condition. Get an offer in 90 seconds. Precision engineering meets seamless liquidation.
+              Skip the stress and the haggling. We buy vehicles in any condition with transparent valuations and guaranteed payouts within 24 hours.
             </p>
           </div>
 
           {/* Metrics Row */}
           <div ref={metricsRef} className="grid grid-cols-2 md:flex md:flex-wrap gap-8 md:gap-16 pt-12 border-t border-white/10">
             <div className="flex flex-col items-center lg:items-start">
-              <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">90s</p>
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Fastest Valuation</p>
+              <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">Instant</p>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Cash Offer</p>
             </div>
             <div className="flex flex-col items-center lg:items-start">
               <p className="text-2xl font-heading font-black text-white uppercase tracking-tight">24h</p>

@@ -9,6 +9,7 @@ import { LocationSection } from '../features/location/LocationSection';
 import { FAQSection } from '../features/faq/FAQSection';
 import { FooterCTA } from '../components/layout/FooterCTA';
 import { QuoteModal } from '../features/quote/QuoteModal';
+import { MobileStickyCTA } from '../components/layout/MobileStickyCTA';
 ---
 
 <Layout title="ABC Autosalvage | Sell Your Car for Cash Instantly">
@@ -23,7 +24,7 @@ import { QuoteModal } from '../features/quote/QuoteModal';
     <VehicleCarousel3D client:load />
 
     {/* The Frictionless Workflow */}
-    <div id="process"><StickyWorkflow client:load /></div>
+    <StickyWorkflow client:load />
 
     {/* Location & Contact */}
     <LocationSection client:visible />
@@ -34,8 +35,8 @@ import { QuoteModal } from '../features/quote/QuoteModal';
   
   <FooterCTA client:visible />
 
-  {/* Global Modal Layer */}
+  {/* Global UI Layers */}
+  <MobileStickyCTA client:load />
   <QuoteModal client:load />
 
 </Layout>
-

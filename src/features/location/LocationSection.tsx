@@ -95,7 +95,7 @@ export const LocationSection: React.FC = () => {
 
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-12 sm:mb-16 text-center lg:text-left">
           <h2 className="text-[10px] font-bold tracking-[0.3em] text-[var(--color-accent-emerald)] uppercase mb-3 font-heading">
             Find Us
           </h2>
