@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/layout/Header';
+import { FooterCTA } from '../components/layout/FooterCTA';
+import { QuoteModal } from '../features/quote/QuoteModal';
+---
+
+<Layout title="Terms of Service | ABC Autosalvage" description="Terms of service for ABC Autosalvage. Read our terms and conditions for vehicle purchase services.">
+  
+  <Header client:load />
+
+  <main class="pt-28 pb-20 px-6">
+    <article class="max-w-3xl mx-auto">
+      
+      <div class="mb-12">
+        <p class="text-[10px] font-bold text-[var(--color-accent-emerald)] uppercase tracking-[0.3em] mb-3">Legal</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tight text-white leading-[1.1]">
+          Terms of Service
+        </h1>
+        <p class="text-gray-500 text-sm mt-4 font-body">Last updated: April 2026</p>
+      </div>
+
+      <div class="w-full h-[1px] bg-gradient-to-r from-[var(--color-accent-emerald)]/30 to-transparent mb-12" />
+
+      <div class="space-y-10 font-body text-gray-300 leading-relaxed">
+        
+        <p>
+          By accessing or using the ABC Autosalvage website and requesting a vehicle quote, you agree to be bound by these Terms of Service. Please read them carefully.
+        </p>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">1. Services Provided</h2>
+          <p class="mb-4">
+            ABC Autosalvage provides vehicle purchasing services, including but not limited to:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>Free vehicle valuations and cash offers</li>
+            <li>Purchase of vehicles in any condition (running, non-running, damaged, wrecked, or for parts)</li>
+            <li>Free towing and vehicle pickup services</li>
+            <li>Assistance with title transfer and paperwork</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">2. Quote Process</h2>
+          <p class="mb-4">
+            When you submit a quote request through our website:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>The information you provide is used to generate an estimated offer for your vehicle</li>
+            <li>All quotes are preliminary and subject to verification of the vehicle's actual condition</li>
+            <li>Final offers may differ from estimates based on in-person inspection</li>
+            <li>Quotes are valid for a limited time and may be withdrawn at our discretion</li>
+            <li>Submitting a quote request does not obligate you to sell your vehicle</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">3. Vehicle Ownership & Title</h2>
+          <p class="mb-4">
+            To sell your vehicle to ABC Autosalvage, you must:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>Be the legal owner of the vehicle</li>
+            <li>Provide a valid title in your name or proper documentation proving ownership</li>
+            <li>Have no outstanding liens, or disclose any existing liens to us</li>
+            <li>Provide a valid government-issued photo ID</li>
+          </ul>
+          <p class="mt-4">
+            If the vehicle is registered under a business name, additional documentation such as a business license or authorization letter may be required.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">4. Payment Terms</h2>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>Payment is made at the time of vehicle pickup or as otherwise agreed upon</li>
+            <li>Payment methods may include cash, check, or electronic transfer</li>
+            <li>The offer amount is final once accepted and the vehicle condition matches the description provided</li>
+            <li>If the vehicle condition differs significantly from what was described, the offer may be adjusted</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">5. Free Towing & Pickup</h2>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>We provide free towing and pickup within our service area</li>
+            <li>The vehicle must be accessible by our tow truck (not blocked, submerged, or in an inaccessible location)</li>
+            <li>If the vehicle cannot be safely loaded, we reserve the right to cancel the transaction</li>
+            <li>All personal belongings must be removed from the vehicle prior to pickup</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">6. Accuracy of Information</h2>
+          <p>
+            You agree to provide accurate and truthful information about your vehicle, including but not limited to: year, make, model, mileage, VIN, condition, and any known damage or mechanical issues. Misrepresentation of vehicle details may result in offer adjustment or cancellation.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">7. Limitation of Liability</h2>
+          <p class="mb-4">
+            ABC Autosalvage shall not be liable for:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>Any indirect, incidental, or consequential damages arising from the use of our services</li>
+            <li>Delays in pickup or payment caused by circumstances beyond our control</li>
+            <li>Damage to property during towing, provided such damage is not caused by our negligence</li>
+            <li>Errors or omissions in preliminary online estimates</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">8. Website Use</h2>
+          <ul class="list-disc list-inside space-y-2 ml-4 text-gray-400">
+            <li>You may only use this website for lawful purposes related to vehicle transactions</li>
+            <li>Submitting false or fraudulent information is prohibited and may be reported to authorities</li>
+            <li>We reserve the right to refuse service to anyone for any lawful reason</li>
+            <li>Automated submissions, bots, or spam are strictly prohibited</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">9. Governing Law</h2>
+          <p>
+            These Terms of Service are governed by the laws of the Commonwealth of Virginia, United States. Any disputes arising from these terms or our services shall be resolved in the courts of Virginia.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">10. Modifications to Terms</h2>
+          <p>
+            ABC Autosalvage reserves the right to modify these Terms of Service at any time. Changes take effect immediately upon posting to this page. Your continued use of our services after changes constitutes acceptance of the updated terms.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-heading font-black uppercase tracking-tight text-white mb-4">11. Contact Us</h2>
+          <div class="bg-[var(--color-base-surface)] border border-[var(--color-base-border)] rounded-xl p-6 mt-4">
+            <p class="text-white font-bold mb-2">ABC Autosalvage</p>
+            <p class="text-gray-400">15346 Blue Star Hwy, Stony Creek, VA 23882, USA</p>
+            <p class="text-gray-400 mt-2">Phone: <a href="tel:17576331779" class="text-[var(--color-accent-emerald)] hover:underline">(757) 633-1779</a></p>
+            <p class="text-gray-400">Email: <a href="mailto:Angel@abc-autosalvage.com" class="text-[var(--color-accent-emerald)] hover:underline">Angel@abc-autosalvage.com</a></p>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-white/5">
+        <a href="/" class="text-[var(--color-accent-emerald)] hover:text-white transition-colors font-heading font-bold uppercase tracking-widest text-sm border-b-2 border-[var(--color-accent-emerald)] hover:border-white pb-1">
+          Back to Home
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <FooterCTA client:visible />
+  <QuoteModal client:load />
+
+</Layout>
