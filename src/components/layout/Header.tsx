@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
           <img 
             src={logo.src} 
             alt="ABC Autosalvage Logo" 
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </div>
 

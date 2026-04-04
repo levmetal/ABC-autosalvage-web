@@ -38,7 +38,7 @@ export const FooterCTA: React.FC = () => {
           <img
             src={logo.src}
             alt="ABC Autosalvage Logo"
-            className="h-8 w-auto object-contain opacity-70"
+            className="h-12 w-auto object-contain opacity-70"
           />
           <div className="flex justify-between w-full max-w-5xl text-gray-400 text-sm font-medium">
             <span>© {new Date().getFullYear()} ABC Autosalvage.</span>
