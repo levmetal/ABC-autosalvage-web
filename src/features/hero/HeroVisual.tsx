@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import heroBg from '../../assets/images/hero/hero-background.jpeg';
+import heroBg from '../../assets/images/hero/hero-background.jpeg?url';
 
 export const HeroVisual: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -86,7 +86,7 @@ export const HeroVisual: React.FC = () => {
       {/* Dynamic Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg.src})` }}
+        style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#050608]/40"></div>
         <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-[0.04]"></div>
