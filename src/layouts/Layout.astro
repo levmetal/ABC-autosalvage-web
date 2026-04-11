@@ -186,10 +186,9 @@ const localBusinessSchema = {
 		
 		<title>{title}</title>
 
-		<!-- ==================== SCHEMA.ORG JSON-LD ==================== -->
-		<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
-		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 	</head>
 	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-accent-emerald)] selection:text-black">
 		<slot />
@@ -210,7 +209,7 @@ const localBusinessSchema = {
 			if (lenis) {
 				lenis.on('scroll', ScrollTrigger.update);
 				gsap.ticker.add((time)=>{
-				  lenis.raf(time * 1000)
+				  lenis?.raf(time * 1000)
 				})
 				gsap.ticker.lagSmoothing(0)
 			}
