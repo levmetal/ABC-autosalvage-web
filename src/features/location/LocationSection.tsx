@@ -26,13 +26,7 @@ const contactDetails = [
   },
 ];
 
-// Google Maps embed URL with the address
-const MAPS_EMBED_URL =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12800!2d-77.3967!3d36.9012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s15346+Blue+Star+Hwy%2C+Stony+Creek%2C+VA+23882!5e0!3m2!1sen!2sus!4v1700000000000';
 
-// More reliable: use the simpler place embed
-const MAPS_PLACE_URL =
-  'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=15346+Blue+Star+Hwy,Stony+Creek,VA+23882&zoom=14';
 
 // Fallback: use a simple search-based embed (no API key needed)
 const MAPS_SEARCH_URL =

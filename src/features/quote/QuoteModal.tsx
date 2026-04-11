@@ -75,20 +75,7 @@ export const QuoteModal: React.FC = () => {
     setIsSubmitting(true);
     setSubmitError('');
 
-    const formData = {
-      method: method === 'vin' ? 'VIN Lookup' : 'Year/Make/Model',
-      vin: method === 'vin' ? vin : 'N/A',
-      year: method === 'ymm' ? year : 'N/A',
-      make: method === 'ymm' ? make : 'N/A',
-      model: method === 'ymm' ? model : 'N/A',
-      zip_code: zipCode,
-      mileage,
-      condition,
-      notes: notes || 'None provided',
-      full_name: fullName,
-      phone,
-      email: email || 'Not provided',
-    };
+
 
     try {
       const targetEmail = import.meta.env.PUBLIC_FORMSUBMIT_EMAIL || 'levi.oquendo@gmail.com';

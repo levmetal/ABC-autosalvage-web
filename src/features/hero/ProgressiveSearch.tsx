@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ChevronRight, CheckCircle, Car } from 'lucide-react';
+import { Search, ChevronRight, CheckCircle } from 'lucide-react';
 
 type SearchMethod = 'vin' | 'ymm';
 type Step = 'initial' | 'details' | 'success';
