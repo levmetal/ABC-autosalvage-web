@@ -89,7 +89,7 @@ export const HeroVisual: React.FC = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#050608]/40"></div>
-        <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-[0.04]"></div>
+        <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-[0.04]"></div>
       </div>
       
       <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/70 to-transparent z-0 pointer-events-none"></div>
@@ -101,7 +101,7 @@ export const HeroVisual: React.FC = () => {
         <div className="lg:col-span-8 flex flex-col justify-center text-center lg:text-left">
           
           <div className="mb-8 flex justify-center lg:justify-start">
-            <span className="inline-block border border-[var(--color-accent-emerald)]/20 rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent-emerald)] backdrop-blur-md bg-[var(--color-accent-emerald)]/5">
+            <span className="inline-block border border-[var(--color-primary)]/20 rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)] backdrop-blur-md bg-[var(--color-primary)]/5">
               Precision Liquidation Platform
             </span>
           </div>
@@ -112,8 +112,8 @@ export const HeroVisual: React.FC = () => {
             </h1>
           </div>
           <div className="overflow-hidden pb-4">
-            <h1 ref={title2Ref} className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] font-heading font-black uppercase tracking-tight text-[var(--color-accent-emerald)] flex justify-center lg:justify-start items-baseline gap-1">
-              Car Today<span className="text-[var(--color-accent-emerald)]">.</span>
+            <h1 ref={title2Ref} className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] font-heading font-black uppercase tracking-tight text-[var(--color-primary)] flex justify-center lg:justify-start items-baseline gap-1">
+              Car Today<span className="text-[var(--color-primary)]">.</span>
             </h1>
           </div>
           
@@ -126,7 +126,7 @@ export const HeroVisual: React.FC = () => {
           {/* Metrics Row */}
           <div ref={metricsRef} className="grid grid-cols-2 md:flex md:flex-wrap gap-8 md:gap-16 pt-12 border-t border-white/10">
             <div className="flex flex-col items-center lg:items-start">
-              <p className="text-2xl font-heading font-black text-[var(--color-accent-emerald)] uppercase tracking-tight">$1,200+</p>
+              <p className="text-2xl font-heading font-black text-[var(--color-primary)] uppercase tracking-tight">$1,200+</p>
               <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Avg. Offer</p>
             </div>
             <div className="flex flex-col items-center lg:items-start">
@@ -148,14 +148,14 @@ export const HeroVisual: React.FC = () => {
            >
              
              {/* Emerald Flare inside card */}
-             <div className="absolute -top-20 -right-20 w-64 h-64 bg-[var(--color-accent-emerald)] rounded-full blur-[100px] opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none"></div>
+             <div className="absolute -top-20 -right-20 w-64 h-64 bg-[var(--color-primary)] rounded-full blur-[100px] opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none"></div>
 
              <div className="relative z-10 flex flex-col gap-6 transform-translate-z-10">
                 
                 {/* Proof of Value Component */}
                  <div className="flex items-center gap-3 bg-black/40 rounded-xl p-4 border border-white/5 shadow-inner">
-                   <div className="w-12 h-12 rounded-full bg-[var(--color-accent-emerald)]/20 flex items-center justify-center relative shadow-[0_0_20px_rgba(0,230,118,0.2)] shrink-0">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-emerald)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                   <div className="w-12 h-12 rounded-full bg-[var(--color-primary)]/20 flex items-center justify-center relative shadow-[0_0_20px_rgba(255,95,0,0.2)] shrink-0">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                    </div>
                    <div>
                      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Average Offer</p>
@@ -173,7 +173,7 @@ export const HeroVisual: React.FC = () => {
                        type="text"
                        placeholder="Year, Make or Model..."
                        onClick={handleOpenModal}
-                       className="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-[var(--color-accent-emerald)] transition-colors cursor-pointer hover:bg-white/10"
+                       className="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-[var(--color-primary)] transition-colors cursor-pointer hover:bg-white/10"
                      />
                    </div>
                 </div>
@@ -182,7 +182,7 @@ export const HeroVisual: React.FC = () => {
                  <button 
                    ref={buttonRef}
                    onClick={handleOpenModal}
-                   className="w-full relative px-6 py-3 bg-[var(--color-accent-emerald)] border border-[#00E676]/50 rounded-lg flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(0,230,118,0.2)] hover:shadow-[0_0_40px_rgba(0,230,118,0.4)] transition-all duration-300 hover:-translate-y-1"
+                   className="w-full relative px-6 py-3 bg-[var(--color-primary)] border border-[#FF5F00]/50 rounded-lg flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(255,95,0,0.2)] hover:shadow-[0_0_40px_rgba(255,95,0,0.4)] transition-all duration-300 hover:-translate-y-1"
                  >
                    <span className="relative z-10 text-[#050608] font-heading font-black uppercase text-sm tracking-widest flex items-center gap-3">
                      Get Quote Now
