@@ -10,8 +10,8 @@ interface Props {
 
 const { 
 	title, 
-	description = "ABC Autosalvage buys vehicles in any condition — wrecked, running, or dead. Get a free cash offer in minutes with free towing across Virginia. Call (757) 633-1779.", 
-	image = "",
+	description = "Turn your non-running or wrecked vehicle into instant cash. ABC Autosalvage offers top dollar, professional recovery, and free towing across Virginia. No hidden fees — just honest service since 2004.", 
+	image = "/og-image.jpg",
 	url = "https://abc-autosalvage.com"
 } = Astro.props;
 
@@ -163,7 +163,7 @@ const localBusinessSchema = {
 		{imageUrl && <meta property="og:image:alt" content="ABC Autosalvage - Cash for Cars in Virginia" />}
 
 		<!-- ==================== TWITTER CARD ==================== -->
-		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		{imageUrl && <meta name="twitter:image" content={imageUrl} />}
