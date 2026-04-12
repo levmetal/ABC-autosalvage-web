@@ -26,11 +26,11 @@ export const MobileStickyCTA: React.FC = () => {
     >
       <button
         onClick={handleOpenModal}
-        className="relative group flex items-center justify-center w-14 h-14 bg-[var(--color-accent-emerald)] text-black rounded-full shadow-[0_10px_30px_rgba(0,230,118,0.4)] active:scale-90 transition-transform"
+        className="relative group flex items-center justify-center w-14 h-14 bg-[var(--color-primary)] text-black rounded-full shadow-[0_10px_30px_rgba(255,95,0,0.4)] active:scale-90 transition-transform"
         aria-label="Get Instant Offer"
       >
         {/* Pulse Effect */}
-        <span className="absolute inset-0 rounded-full bg-[var(--color-accent-emerald)] animate-ping opacity-20"></span>
+        <span className="absolute inset-0 rounded-full bg-[var(--color-primary)] animate-ping opacity-20"></span>
         
         <BadgeDollarSign className="w-7 h-7 relative z-10" />
         

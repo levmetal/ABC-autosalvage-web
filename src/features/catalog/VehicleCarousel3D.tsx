@@ -128,14 +128,14 @@ export const VehicleCarousel3D: React.FC = () => {
       >
         {/* Background Ambient */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-[var(--color-accent-emerald)] rounded-full blur-[200px] opacity-[0.05] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-[var(--color-primary)] rounded-full blur-[200px] opacity-[0.05] pointer-events-none"></div>
 
         {/* Section Header */}
         <div className="relative z-50 text-center px-4 mb-4 md:mb-8 pointer-events-none">
-           <h2 className="text-[10px] font-bold tracking-widest text-[var(--color-accent-emerald)] uppercase mb-2 font-heading">What We Buy</h2>
+           <h2 className="text-[10px] font-bold tracking-widest text-[var(--color-primary)] uppercase mb-2 font-heading">What We Buy</h2>
            <h3 className="text-xl md:text-3xl lg:text-4xl font-heading font-black uppercase tracking-tight text-white leading-tight">
              If it has an engine, <br className="hidden md:block" />
-             <span className="text-gray-400 line-through decoration-[var(--color-accent-emerald)] decoration-4 mr-2">we want it.</span>
+             <span className="text-gray-400 line-through decoration-[var(--color-primary)] decoration-4 mr-2">we want it.</span>
              <span className="text-white">we'll buy it.</span>
            </h3>
         </div>
@@ -155,7 +155,7 @@ export const VehicleCarousel3D: React.FC = () => {
                 {/* Adding a loading fallback color before image loads */}
                 <img src={vehicle.image} alt={vehicle.title} className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 opacity-70 group-hover:opacity-100 group-hover:scale-105" loading="lazy" />
                 {/* Emerald Overlay */}
-                <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 {/* Dark Vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
                 
@@ -165,7 +165,7 @@ export const VehicleCarousel3D: React.FC = () => {
 
               {/* Badges */}
               <div className="relative z-10 flex justify-between p-6 transform-translate-z-10">
-                 <span className="bg-[var(--color-accent-emerald)] text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full self-start shadow-[0_0_20px_rgba(0,230,118,0.3)]">
+                 <span className="bg-[var(--color-primary)] text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full self-start shadow-[0_0_20px_rgba(255,95,0,0.3)]">
                     {vehicle.badge}
                  </span>
                  <span className="text-white/20 text-4xl font-heading font-black">0{vehicle.id}</span>
@@ -178,7 +178,7 @@ export const VehicleCarousel3D: React.FC = () => {
                   {vehicle.description}
                 </p>
                 
-                <div className="mt-4 md:mt-6 flex items-center gap-2 text-[var(--color-accent-emerald)] font-bold uppercase tracking-widest text-[#00E676] group-hover:text-white transition-colors duration-300">
+                <div className="mt-4 md:mt-6 flex items-center gap-2 text-[var(--color-primary)] font-bold uppercase tracking-widest text-[#FF5F00] group-hover:text-white transition-colors duration-300">
                   <span className="text-[10px] md:text-xs">Get Value</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-2 transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>

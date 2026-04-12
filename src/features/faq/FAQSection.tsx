@@ -70,17 +70,17 @@ export const FAQSection: React.FC = () => {
       className="relative bg-[var(--color-base)] py-20 sm:py-28 px-6 sm:px-12 lg:px-16 overflow-hidden"
     >
       {/* Ambient glow */}
-      <div className="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[var(--color-accent-emerald)] rounded-full blur-[200px] opacity-[0.03] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[var(--color-primary)] rounded-full blur-[200px] opacity-[0.03] pointer-events-none" />
 
       <div ref={contentRef} className="max-w-[900px] mx-auto">
         {/* Section Header */}
         <div className="mb-12 sm:mb-16 text-center">
-          <h2 className="text-[10px] font-bold tracking-[0.3em] text-[var(--color-accent-emerald)] uppercase mb-3 font-heading">
+          <h2 className="text-[10px] font-bold tracking-[0.3em] text-[var(--color-primary)] uppercase mb-3 font-heading">
             FAQ
           </h2>
           <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-black uppercase tracking-tight leading-tight text-white italic">
             Questions?{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent-emerald)] to-white">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary)] to-white">
               We've Got Answers.
             </span>
           </h3>
@@ -93,8 +93,8 @@ export const FAQSection: React.FC = () => {
               key={index}
               className={`border rounded-xl transition-all duration-300 relative overflow-hidden ${
                 openIndex === index
-                  ? 'border-[var(--color-accent-emerald)]/60 bg-[var(--color-base-surface)] shadow-[0_0_20px_rgba(0,230,118,0.1)]'
-                  : 'border-white/10 hover:border-[var(--color-accent-emerald)]/50 bg-white/[0.02] hover:bg-white/[0.05]'
+                  ? 'border-[var(--color-primary)]/60 bg-[var(--color-base-surface)] shadow-[0_0_20px_rgba(255,95,0,0.1)]'
+                  : 'border-white/10 hover:border-[var(--color-primary)]/50 bg-white/[0.02] hover:bg-white/[0.05]'
               }`}
             >
               <button
@@ -104,15 +104,15 @@ export const FAQSection: React.FC = () => {
               >
                 <span 
                   className="text-sm sm:text-base font-heading font-black uppercase tracking-tight pr-4 transition-colors duration-300"
-                  style={{ color: openIndex === index ? 'var(--color-accent-emerald)' : '#FFFFFF' }}
+                  style={{ color: openIndex === index ? 'var(--color-primary)' : '#FFFFFF' }}
                 >
                   {faq.question}
                 </span>
                 <ChevronDown
                   className={`shrink-0 w-5 h-5 transition-all duration-300 ${
                     openIndex === index
-                      ? 'text-[var(--color-accent-emerald)] rotate-180'
-                      : 'text-white/40 group-hover:text-[var(--color-accent-emerald)]'
+                      ? 'text-[var(--color-primary)] rotate-180'
+                      : 'text-white/40 group-hover:text-[var(--color-primary)]'
                   }`}
                 />
               </button>

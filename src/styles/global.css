@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent-emerald: #00E676; /* Emerald Green */
-  --color-accent-emerald-hover: #00C853;
+  --color-primary: #FF5F00; /* Vibrant Orange from shirts */
+  --color-primary-hover: #E25400;
   --color-base: #0B0E14; /* Deep dark background */
   --color-base-surface: #141822;
   --color-base-border: #212634;

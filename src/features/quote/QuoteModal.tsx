@@ -132,7 +132,7 @@ export const QuoteModal: React.FC = () => {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-[#050608]/95 backdrop-blur-2xl">
       
       {/* Background glow for immersion */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-[var(--color-accent-emerald)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-[var(--color-primary)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
 
       <button 
         onClick={() => { handleClose(); }}
@@ -151,13 +151,13 @@ export const QuoteModal: React.FC = () => {
             {step === 'details-contact' && 'Your Contact Info'}
             {step === 'success' && 'Request Received'}
           </h2>
-          <div className="w-10 h-[2px] bg-[var(--color-accent-emerald)] mx-auto lg:mx-0"></div>
+          <div className="w-10 h-[2px] bg-[var(--color-primary)] mx-auto lg:mx-0"></div>
           {/* Progress dots */}
           <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
-            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'initial' ? 'bg-[var(--color-accent-emerald)] w-6' : 'bg-white/20'}`} />
-            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'details-vehicle' ? 'bg-[var(--color-accent-emerald)] w-6' : 'bg-white/20'}`} />
-            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'details-contact' ? 'bg-[var(--color-accent-emerald)] w-6' : 'bg-white/20'}`} />
-            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'success' ? 'bg-[var(--color-accent-emerald)] w-6' : 'bg-white/20'}`} />
+            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'initial' ? 'bg-[var(--color-primary)] w-6' : 'bg-white/20'}`} />
+            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'details-vehicle' ? 'bg-[var(--color-primary)] w-6' : 'bg-white/20'}`} />
+            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'details-contact' ? 'bg-[var(--color-primary)] w-6' : 'bg-white/20'}`} />
+            <span className={`w-2 h-2 rounded-full transition-all duration-300 ${step === 'success' ? 'bg-[var(--color-primary)] w-6' : 'bg-white/20'}`} />
           </div>
         </div>
 
@@ -184,49 +184,49 @@ export const QuoteModal: React.FC = () => {
               {method === 'ymm' ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-2 relative group">
-                    <label htmlFor="year" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Year</label>
+                    <label htmlFor="year" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Year</label>
                     <input 
                       id="year"
                       type="text" 
                       placeholder="e.g. 2015" 
                       value={year}
                       onChange={(e) => setYear(e.target.value.replace(/[^0-9]/g, '').slice(0, 4))}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all autofill:bg-[var(--color-base-surface)]"
+                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all autofill:bg-[var(--color-base-surface)]"
                       style={{ colorScheme: 'dark' }}
                     />
                   </div>
                   
                   <div className="flex flex-col gap-2 relative group">
-                    <label htmlFor="make" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Make</label>
+                    <label htmlFor="make" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Make</label>
                     <input 
                       id="make"
                       type="text" 
                       placeholder="e.g. Toyota" 
                       value={make}
                       onChange={(e) => setMake(e.target.value)}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                       style={{ colorScheme: 'dark' }}
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 relative group sm:col-span-2">
-                    <label htmlFor="model" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Model</label>
+                    <label htmlFor="model" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Model</label>
                     <input 
                       id="model"
                       type="text" 
                       placeholder="e.g. Camry, F-150, Civic..." 
                       value={model}
                       onChange={(e) => setModel(e.target.value)}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                       style={{ colorScheme: 'dark' }}
                     />
                   </div>
                 </div>
               ) : (
                 <div className="flex flex-col gap-2 relative group">
-                  <label htmlFor="vin" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Vehicle Identification Number (VIN)</label>
+                  <label htmlFor="vin" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Vehicle Identification Number (VIN)</label>
                   <div className="relative">
-                    <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-[var(--color-accent-emerald)] transition-colors" />
+                    <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-[var(--color-primary)] transition-colors" />
                     <input 
                       id="vin"
                       type="text" 
@@ -234,7 +234,7 @@ export const QuoteModal: React.FC = () => {
                       value={vin}
                       onChange={(e) => setVin(e.target.value.toUpperCase().replace(/[^A-HJ-NPR-Z0-9]/g, '').slice(0, 17))}
                       maxLength={17}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all tracking-widest uppercase"
+                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all tracking-widest uppercase"
                       style={{ colorScheme: 'dark' }}
                     />
                   </div>
@@ -245,7 +245,7 @@ export const QuoteModal: React.FC = () => {
               )}
 
               <div className="flex flex-col gap-2 relative group">
-                <label htmlFor="zip" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Zip Code</label>
+                <label htmlFor="zip" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Zip Code</label>
                 <input 
                   id="zip"
                   type="text" 
@@ -253,7 +253,7 @@ export const QuoteModal: React.FC = () => {
                   value={zipCode}
                   onChange={(e) => setZipCode(e.target.value.replace(/[^0-9]/g, '').slice(0, 5))}
                   maxLength={5}
-                  className="w-full max-w-[200px] bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                  className="w-full max-w-[200px] bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                   style={{ colorScheme: 'dark' }}
                 />
               </div>
@@ -262,7 +262,7 @@ export const QuoteModal: React.FC = () => {
                 <button 
                   onClick={() => setStep('details-vehicle')}
                   disabled={!isStep1Valid}
-                  className="group relative overflow-hidden bg-[var(--color-accent-emerald)] w-full px-6 py-3 rounded-full inline-flex justify-center items-center gap-2 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(0,230,118,0.2)] hover:shadow-[0_0_40px_rgba(0,230,118,0.4)]"
+                  className="group relative overflow-hidden bg-[var(--color-primary)] w-full px-6 py-3 rounded-full inline-flex justify-center items-center gap-2 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(255,95,0,0.2)] hover:shadow-[0_0_40px_rgba(255,95,0,0.4)]"
                 >
                   <span className="relative z-10 font-heading font-black uppercase tracking-tight text-sm text-black">
                     Continue to Details
@@ -282,26 +282,26 @@ export const QuoteModal: React.FC = () => {
             
             <div className="flex flex-col gap-5">
               <div className="flex flex-col gap-2 relative group">
-                <label htmlFor="mileage" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Mileage (approximate)</label>
+                <label htmlFor="mileage" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Mileage (approximate)</label>
                 <input 
                   id="mileage"
                   type="text" 
                   placeholder="e.g. 120000" 
                   value={mileage}
                   onChange={(e) => setMileage(e.target.value.replace(/[^0-9]/g, ''))}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-base lg:text-lg font-heading font-black text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-base lg:text-lg font-heading font-black text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                   style={{ colorScheme: 'dark' }}
                 />
               </div>
 
               <div className="flex flex-col gap-2 relative group">
-                <label htmlFor="condition" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Does it run?</label>
+                <label htmlFor="condition" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Does it run?</label>
                 <div className="relative">
                   <select 
                     id="condition"
                     value={condition} 
                     onChange={(e) => setCondition(e.target.value)}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all appearance-none pr-10"
+                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all appearance-none pr-10"
                     style={{ colorScheme: 'dark' }}
                   >
                     <option value="" disabled className="bg-[#141822] text-white">Select condition</option>
@@ -318,14 +318,14 @@ export const QuoteModal: React.FC = () => {
               </div>
 
               <div className="flex flex-col gap-2 relative group">
-                <label htmlFor="notes" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Describe the issue or damage (optional)</label>
+                <label htmlFor="notes" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Describe the issue or damage (optional)</label>
                 <textarea 
                   id="notes"
                   rows={2}
                   placeholder="e.g. Front end damage, transmission slips..." 
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm font-body text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all resize-none"
+                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm font-body text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all resize-none"
                   style={{ colorScheme: 'dark' }}
                 />
               </div>
@@ -340,7 +340,7 @@ export const QuoteModal: React.FC = () => {
                 <button 
                   onClick={() => setStep('details-contact')}
                   disabled={!isStep2Valid}
-                  className="group relative overflow-hidden bg-[var(--color-accent-emerald)] w-full sm:flex-1 px-6 py-3 rounded-full inline-flex justify-center items-center gap-2 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(0,230,118,0.2)] hover:shadow-[0_0_40px_rgba(0,230,118,0.4)]"
+                  className="group relative overflow-hidden bg-[var(--color-primary)] w-full sm:flex-1 px-6 py-3 rounded-full inline-flex justify-center items-center gap-2 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(255,95,0,0.2)] hover:shadow-[0_0_40px_rgba(255,95,0,0.4)]"
                 >
                   <span className="relative z-10 font-heading font-black uppercase tracking-tight text-sm text-black">
                     Continue to Contact Info
@@ -357,21 +357,21 @@ export const QuoteModal: React.FC = () => {
             
             <div className="flex flex-col gap-5">
               <div className="flex flex-col gap-2 relative group">
-                <label htmlFor="fullName" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Full Name</label>
+                <label htmlFor="fullName" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Full Name</label>
                 <input 
                   id="fullName"
                   type="text" 
                   placeholder="Your name" 
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                   style={{ colorScheme: 'dark' }}
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2 relative group">
-                  <label htmlFor="phone" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Phone Number</label>
+                  <label htmlFor="phone" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Phone Number</label>
                   <input 
                     id="phone"
                     type="tel" 
@@ -388,20 +388,20 @@ export const QuoteModal: React.FC = () => {
                       setPhone(formatted);
                     }}
                     maxLength={14}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                     style={{ colorScheme: 'dark' }}
                   />
                 </div>
 
                 <div className="flex flex-col gap-2 relative group">
-                  <label htmlFor="email" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-accent-emerald)] transition-colors">Email (optional)</label>
+                  <label htmlFor="email" className="text-[10px] font-bold text-gray-300 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Email (optional)</label>
                   <input 
                     id="email"
                     type="email" 
                     placeholder="your@email.com" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-accent-emerald)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent-emerald)]/30 transition-all"
+                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
                     style={{ colorScheme: 'dark' }}
                   />
                 </div>
@@ -417,7 +417,7 @@ export const QuoteModal: React.FC = () => {
                 <button 
                   onClick={handleSubmit}
                   disabled={!isStep3Valid || isSubmitting}
-                  className="group relative overflow-hidden bg-[var(--color-accent-emerald)] w-full sm:flex-1 px-6 py-3 rounded-full inline-flex justify-center items-center transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(0,230,118,0.2)] hover:shadow-[0_0_40px_rgba(0,230,118,0.4)]"
+                  className="group relative overflow-hidden bg-[var(--color-primary)] w-full sm:flex-1 px-6 py-3 rounded-full inline-flex justify-center items-center transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed disabled:hover:scale-100 shadow-[0_0_20px_rgba(255,95,0,0.2)] hover:shadow-[0_0_40px_rgba(255,95,0,0.4)]"
                 >
                   {isSubmitting ? (
                     <span className="relative z-10 font-heading font-black uppercase tracking-tight text-sm text-black flex items-center gap-2">
@@ -451,8 +451,8 @@ export const QuoteModal: React.FC = () => {
 
         {step === 'success' && (
           <div className="py-12 animate-in zoom-in-95 duration-500 flex flex-col items-center justify-center text-center">
-              <div className="w-20 h-20 lg:w-24 lg:h-24 bg-[var(--color-accent-emerald)]/10 rounded-full flex items-center justify-center mb-8 border border-[var(--color-accent-emerald)]/50">
-                 <CheckCircle className="w-10 h-10 lg:w-12 lg:h-12 text-[var(--color-accent-emerald)] shadow-[0_0_30px_rgba(0,230,118,0.5)] rounded-full animate-pulse" />
+              <div className="w-20 h-20 lg:w-24 lg:h-24 bg-[var(--color-primary)]/10 rounded-full flex items-center justify-center mb-8 border border-[var(--color-primary)]/50">
+                 <CheckCircle className="w-10 h-10 lg:w-12 lg:h-12 text-[var(--color-primary)] shadow-[0_0_30px_rgba(255,95,0,0.5)] rounded-full animate-pulse" />
               </div>
               <h3 className="text-2xl lg:text-3xl font-heading font-black uppercase tracking-tight text-white mb-4">Request Received</h3>
               <p className="text-base lg:text-lg font-body text-gray-400 leading-relaxed max-w-md">
@@ -460,7 +460,7 @@ export const QuoteModal: React.FC = () => {
               </p>
               <button 
                 onClick={() => { resetForm(); handleClose(); }}
-                className="mt-10 text-[var(--color-accent-emerald)] hover:text-white transition-colors font-heading font-bold uppercase tracking-widest text-sm border-b-2 border-[var(--color-accent-emerald)] hover:border-white pb-1"
+                className="mt-10 text-[var(--color-primary)] hover:text-white transition-colors font-heading font-bold uppercase tracking-widest text-sm border-b-2 border-[var(--color-primary)] hover:border-white pb-1"
               >
                 Close
               </button>

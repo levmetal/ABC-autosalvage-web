@@ -106,7 +106,7 @@ export const StickyWorkflow: React.FC = () => {
               >
                 <img src={step.image} alt={step.title} className="max-w-none w-full h-full object-cover origin-center transform transition-transform duration-[10s] hover:scale-110 object-center mix-blend-luminosity opacity-60" />
                 {/* Color tint overlay */}
-                <div className="absolute inset-0 bg-[var(--color-accent-emerald)] mix-blend-overlay opacity-20"></div>
+                <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-20"></div>
                 {/* Vignette */}
                 <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.9)]"></div>
               </div>
@@ -117,9 +117,9 @@ export const StickyWorkflow: React.FC = () => {
         {/* Right Side (Scrolling content) */}
         <div ref={rightTextRef} className="py-12 px-6 sm:px-12 lg:py-24 lg:px-16">
           <div className="mb-16 lg:mb-24 text-center lg:text-left">
-            <h2 className="text-[10px] font-bold tracking-[0.3em] text-[var(--color-accent-emerald)] uppercase mb-3 font-heading">How it works</h2>
+            <h2 className="text-[10px] font-bold tracking-[0.3em] text-[var(--color-primary)] uppercase mb-3 font-heading">How it works</h2>
             <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-black uppercase tracking-tight leading-tight text-white italic mb-4">
-              The ABC of <span className="text-white bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent-emerald)] to-white">Selling Your Car.</span>
+              The ABC of <span className="text-white bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary)] to-white">Selling Your Car.</span>
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 font-body uppercase tracking-widest font-bold">As simple as A-B-C.</p>
           </div>
@@ -128,7 +128,7 @@ export const StickyWorkflow: React.FC = () => {
 
             {/* Robust Vertical Progress Line Container - Simplified z-index & positioning */}
             <div className="absolute left-6 w-[2px] top-6 bottom-6 bg-white/5 z-0">
-              <div className="progress-line-inner w-full h-0 bg-[var(--color-accent-emerald)] origin-top shadow-[0_0_15px_rgba(0,230,118,0.5)]" />
+              <div className="progress-line-inner w-full h-0 bg-[var(--color-primary)] origin-top shadow-[0_0_15px_rgba(255,95,0,0.5)]" />
             </div>
 
             {steps.map((step, index) => (
@@ -142,10 +142,10 @@ export const StickyWorkflow: React.FC = () => {
                 {/* Step Badge - Perfectly aligned, z-index 20 keeps it in front */}
                 <div className="shrink-0 flex items-center justify-center w-12 h-12 relative z-20">
                   <div className={`relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-all duration-500 bg-[var(--color-base)] ${activeIndex === index
-                    ? 'bg-[var(--color-accent-emerald)]/10 border-[var(--color-accent-emerald)] shadow-[0_0_20px_rgba(0,230,118,0.3)] scale-110'
+                    ? 'bg-[var(--color-primary)]/10 border-[var(--color-primary)] shadow-[0_0_20px_rgba(255,95,0,0.3)] scale-110'
                     : 'border-white/10'
                     }`}>
-                    <span className={`text-lg sm:text-xl font-heading font-black relative z-30 ${activeIndex === index ? 'text-[var(--color-accent-emerald)]' : 'text-white/20'}`}>
+                    <span className={`text-lg sm:text-xl font-heading font-black relative z-30 ${activeIndex === index ? 'text-[var(--color-primary)]' : 'text-white/20'}`}>
                       {step.letter}
                     </span>
 

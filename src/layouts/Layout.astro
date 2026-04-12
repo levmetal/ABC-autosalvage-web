@@ -141,7 +141,10 @@ const localBusinessSchema = {
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=3" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
+		<link rel="shortcut icon" href="/favicon.ico?v=3" />
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- Canonical URL -->
@@ -190,7 +193,7 @@ const localBusinessSchema = {
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 	</head>
-	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-accent-emerald)] selection:text-black">
+	<body class="bg-[var(--color-base)] text-white overflow-x-hidden antialiased selection:bg-[var(--color-primary)] selection:text-black">
 		<slot />
 
 		<script>
