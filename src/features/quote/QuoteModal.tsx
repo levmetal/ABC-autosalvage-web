@@ -191,8 +191,8 @@ export const QuoteModal: React.FC = () => {
                       placeholder="e.g. 2015" 
                       value={year}
                       onChange={(e) => setYear(e.target.value.replace(/[^0-9]/g, '').slice(0, 4))}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all autofill:bg-[var(--color-base-surface)]"
-                      style={{ colorScheme: 'dark' }}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all autofill:bg-white"
+                      style={{ colorScheme: 'light' }}
                     />
                   </div>
                   
@@ -204,8 +204,8 @@ export const QuoteModal: React.FC = () => {
                       placeholder="e.g. Toyota" 
                       value={make}
                       onChange={(e) => setMake(e.target.value)}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                      style={{ colorScheme: 'dark' }}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                      style={{ colorScheme: 'light' }}
                     />
                   </div>
 
@@ -234,8 +234,8 @@ export const QuoteModal: React.FC = () => {
                       value={vin}
                       onChange={(e) => setVin(e.target.value.toUpperCase().replace(/[^A-HJ-NPR-Z0-9]/g, '').slice(0, 17))}
                       maxLength={17}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all tracking-widest uppercase"
-                      style={{ colorScheme: 'dark' }}
+                      className="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all tracking-widest uppercase"
+                      style={{ colorScheme: 'light' }}
                     />
                   </div>
                   <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">
@@ -253,8 +253,8 @@ export const QuoteModal: React.FC = () => {
                   value={zipCode}
                   onChange={(e) => setZipCode(e.target.value.replace(/[^0-9]/g, '').slice(0, 5))}
                   maxLength={5}
-                  className="w-full max-w-[200px] bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                  style={{ colorScheme: 'dark' }}
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                  style={{ colorScheme: 'light' }}
                 />
               </div>
 
@@ -289,8 +289,8 @@ export const QuoteModal: React.FC = () => {
                   placeholder="e.g. 120000" 
                   value={mileage}
                   onChange={(e) => setMileage(e.target.value.replace(/[^0-9]/g, ''))}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-base lg:text-lg font-heading font-black text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                  style={{ colorScheme: 'dark' }}
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-base lg:text-lg font-heading font-black text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                  style={{ colorScheme: 'light' }}
                 />
               </div>
 
@@ -301,15 +301,15 @@ export const QuoteModal: React.FC = () => {
                     id="condition"
                     value={condition} 
                     onChange={(e) => setCondition(e.target.value)}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all appearance-none pr-10"
-                    style={{ colorScheme: 'dark' }}
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all appearance-none pr-10"
+                    style={{ colorScheme: 'light' }}
                   >
-                    <option value="" disabled className="bg-[#141822] text-white">Select condition</option>
-                    <option value="runs-drives" className="bg-[#141822] text-white">Runs and drives fine</option>
-                    <option value="starts-not-drive" className="bg-[#141822] text-white">Starts but cannot be driven</option>
-                    <option value="no-start" className="bg-[#141822] text-white">Does not start / Engine issues</option>
-                    <option value="wrecked" className="bg-[#141822] text-white">Wrecked / Total loss / Damaged</option>
-                    <option value="parts-only" className="bg-[#141822] text-white">For parts only / Non-repairable</option>
+                    <option value="" disabled className="bg-white text-gray-500">Select condition</option>
+                    <option value="runs-drives" className="bg-white text-gray-900">Runs and drives fine</option>
+                    <option value="starts-not-drive" className="bg-white text-gray-900">Starts but cannot be driven</option>
+                    <option value="no-start" className="bg-white text-gray-900">Does not start / Engine issues</option>
+                    <option value="wrecked" className="bg-white text-gray-900">Wrecked / Total loss / Damaged</option>
+                    <option value="parts-only" className="bg-white text-gray-900">For parts only / Non-repairable</option>
                   </select>
                   <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -325,8 +325,8 @@ export const QuoteModal: React.FC = () => {
                   placeholder="e.g. Front end damage, transmission slips..." 
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm font-body text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all resize-none"
-                  style={{ colorScheme: 'dark' }}
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm font-body text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all resize-none"
+                  style={{ colorScheme: 'light' }}
                 />
               </div>
 
@@ -364,8 +364,8 @@ export const QuoteModal: React.FC = () => {
                   placeholder="Your name" 
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                  style={{ colorScheme: 'dark' }}
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                  style={{ colorScheme: 'light' }}
                 />
               </div>
 
@@ -388,8 +388,8 @@ export const QuoteModal: React.FC = () => {
                       setPhone(formatted);
                     }}
                     maxLength={14}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                    style={{ colorScheme: 'dark' }}
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                    style={{ colorScheme: 'light' }}
                   />
                 </div>
 
@@ -401,8 +401,8 @@ export const QuoteModal: React.FC = () => {
                     placeholder="your@email.com" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                    style={{ colorScheme: 'dark' }}
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                    style={{ colorScheme: 'light' }}
                   />
                 </div>
               </div>

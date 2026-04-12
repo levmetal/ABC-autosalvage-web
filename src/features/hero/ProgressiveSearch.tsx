@@ -54,10 +54,10 @@ export const ProgressiveSearch: React.FC = () => {
                   <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Production Year</label>
                   <select 
                     value={year} onChange={(e) => setYear(e.target.value)}
-                    className="w-full bg-transparent border-b border-white/10 pb-2 text-white hover:border-white/30 focus:border-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
+                    className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 hover:border-gray-400 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
                   >
-                    <option value="" disabled className="bg-[#0a0c10]">e.g. 2024</option>
-                    {years.map(y => <option key={y} value={y} className="bg-[#0a0c10]">{y}</option>)}
+                    <option value="" disabled className="bg-white text-gray-500">e.g. 2024</option>
+                    {years.map(y => <option key={y} value={y} className="bg-white text-gray-900">{y}</option>)}
                   </select>
                 </div>
                 
@@ -65,14 +65,14 @@ export const ProgressiveSearch: React.FC = () => {
                   <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Manufacturer</label>
                   <select 
                     value={make} onChange={(e) => setMake(e.target.value)}
-                    className="w-full bg-transparent border-b border-white/10 pb-2 text-white hover:border-white/30 focus:border-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
+                    className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 hover:border-gray-400 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
                   >
-                    <option value="" disabled className="bg-[#0a0c10]">e.g. BMW</option>
-                    <option value="toyota" className="bg-[#0a0c10]">Toyota</option>
-                    <option value="honda" className="bg-[#0a0c10]">Honda</option>
-                    <option value="ford" className="bg-[#0a0c10]">Ford</option>
-                    <option value="chevrolet" className="bg-[#0a0c10]">Chevrolet</option>
-                    <option value="other" className="bg-[#0a0c10]">Other</option>
+                    <option value="" disabled className="bg-white text-gray-500">e.g. BMW</option>
+                    <option value="toyota" className="bg-white text-gray-900">Toyota</option>
+                    <option value="honda" className="bg-white text-gray-900">Honda</option>
+                    <option value="ford" className="bg-white text-gray-900">Ford</option>
+                    <option value="chevrolet" className="bg-white text-gray-900">Chevrolet</option>
+                    <option value="other" className="bg-white text-gray-900">Other</option>
                   </select>
                 </div>
 
@@ -80,13 +80,13 @@ export const ProgressiveSearch: React.FC = () => {
                   <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Model Designation</label>
                   <select 
                     value={model} onChange={(e) => setModel(e.target.value)}
-                    className="w-full bg-transparent border-b border-white/10 pb-2 text-white hover:border-white/30 focus:border-[var(--color-primary)] focus:outline-none appearance-none transition-colors cursor-pointer"
+                    className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 hover:border-gray-400 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none appearance-none transition-colors cursor-pointer"
                   >
-                    <option value="" disabled className="bg-[#0a0c10]">e.g. M3 Competition</option>
-                    <option value="camry" className="bg-[#0a0c10]">Camry</option>
-                    <option value="civic" className="bg-[#0a0c10]">Civic</option>
-                    <option value="f150" className="bg-[#0a0c10]">F-150</option>
-                    <option value="other" className="bg-[#0a0c10]">Other</option>
+                    <option value="" disabled className="bg-white text-gray-500">e.g. M3 Competition</option>
+                    <option value="camry" className="bg-white text-gray-900">Camry</option>
+                    <option value="civic" className="bg-white text-gray-900">Civic</option>
+                    <option value="f150" className="bg-white text-gray-900">F-150</option>
+                    <option value="other" className="bg-white text-gray-900">Other</option>
                   </select>
                 </div>
               </div>
@@ -94,13 +94,13 @@ export const ProgressiveSearch: React.FC = () => {
               <div className="flex flex-col gap-2 relative group mb-6">
                 <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest group-focus-within:text-[var(--color-primary)] transition-colors">Vehicle ID Number (VIN)</label>
                 <div className="relative">
-                  <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 group-focus-within:text-[var(--color-primary)] transition-colors" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-[var(--color-primary)] transition-colors z-10" />
                   <input 
                     type="text" 
                     placeholder="Enter 17-digit code" 
                     value={vin}
                     onChange={(e) => setVin(e.target.value)}
-                    className="w-full bg-transparent border-b border-white/10 pl-8 pb-2 text-white placeholder-gray-600 focus:border-[var(--color-primary)] focus:outline-none transition-all"
+                    className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 placeholder-gray-500 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none transition-all uppercase"
                   />
                 </div>
               </div>
@@ -113,7 +113,7 @@ export const ProgressiveSearch: React.FC = () => {
                 placeholder="10001" 
                 value={zipCode}
                 onChange={(e) => setZipCode(e.target.value)}
-                className="w-full bg-transparent border-b border-white/10 pb-2 text-white placeholder-gray-600 focus:border-[var(--color-primary)] focus:outline-none transition-all"
+                className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 placeholder-gray-500 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none transition-all"
               />
             </div>
 
@@ -143,7 +143,7 @@ export const ProgressiveSearch: React.FC = () => {
                 placeholder="Approximate Mileage" 
                 value={mileage}
                 onChange={(e) => setMileage(e.target.value)}
-                className="w-full bg-transparent border-b border-white/10 pb-2 text-white placeholder-gray-600 focus:border-[var(--color-primary)] focus:outline-none transition-all"
+                className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 placeholder-gray-500 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none transition-all"
               />
             </div>
 
@@ -152,13 +152,13 @@ export const ProgressiveSearch: React.FC = () => {
               <select 
                 value={condition} 
                 onChange={(e) => setCondition(e.target.value)}
-                className="w-full bg-transparent border-b border-white/10 pb-2 text-white focus:border-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
+                className="w-full bg-white text-gray-900 border border-gray-300 rounded-lg px-4 py-2.5 hover:border-gray-400 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] focus:outline-none appearance-none transition-colors"
               >
-                <option value="" disabled className="bg-[#0a0c10]">Select status</option>
-                <option value="runs" className="bg-[#0a0c10]">Runs and Drives</option>
-                <option value="starts" className="bg-[#0a0c10]">Starts but doesn't drive</option>
-                <option value="dead" className="bg-[#0a0c10]">Doesn't start / Mechanical Failure</option>
-                <option value="wrecked" className="bg-[#0a0c10]">Wrecked / Total Loss</option>
+                <option value="" disabled className="bg-white text-gray-500">Select status</option>
+                <option value="runs" className="bg-white text-gray-900">Runs and Drives</option>
+                <option value="starts" className="bg-white text-gray-900">Starts but doesn't drive</option>
+                <option value="dead" className="bg-white text-gray-900">Doesn't start / Mechanical Failure</option>
+                <option value="wrecked" className="bg-white text-gray-900">Wrecked / Total Loss</option>
               </select>
             </div>
 
