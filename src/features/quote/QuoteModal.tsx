@@ -217,8 +217,8 @@ export const QuoteModal: React.FC = () => {
                       placeholder="e.g. Camry, F-150, Civic..." 
                       value={model}
                       onChange={(e) => setModel(e.target.value)}
-                      className="w-full bg-[var(--color-base-surface)] border border-white/10 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-white placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 transition-all"
-                      style={{ colorScheme: 'dark' }}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm lg:text-base font-heading font-bold text-gray-900 placeholder-gray-500 focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-all"
+                      style={{ colorScheme: 'light' }}
                     />
                   </div>
                 </div>

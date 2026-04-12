@@ -24,19 +24,13 @@
     font-weight: 600;
   }
 
-  /* Force white text on all form inputs — overrides browser autofill defaults */
+  /* Form inputs inherit family but can be styled individually */
   input, textarea, select {
-    color: #FFFFFF !important;
-    caret-color: #FFFFFF;
+    caret-color: var(--color-primary);
   }
 
   input::placeholder, textarea::placeholder {
-    color: #6B7280 !important;
-  }
-
-  select option {
-    background-color: #141822 !important;
-    color: #FFFFFF !important;
+    color: #9CA3AF;
   }
 }
 
