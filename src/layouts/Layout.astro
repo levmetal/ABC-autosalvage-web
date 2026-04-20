@@ -10,7 +10,7 @@ interface Props {
 
 const { 
 	title, 
-	description = "Turn your non-running or wrecked vehicle into instant cash. ABC Autosalvage offers top dollar, professional recovery, and free towing across Virginia. No hidden fees — just fast, honest service.", 
+	description = "Turn your non-running or wrecked vehicle into instant cash. ABC Autosalvage offers top dollar, professional recovery, and free towing across North Carolina. No hidden fees — just fast, honest service.", 
 	image = "/og-image.jpg",
 	url = "https://abc-autosalvage.com"
 } = Astro.props;
@@ -26,21 +26,21 @@ const businessSchema = {
   "alternateName": "ABC Auto Salvage",
   "image": imageUrl,
   "url": siteUrl,
-  "telephone": "+1-757-633-1779",
+  "telephone": "+1-919-437-8198",
   "email": "Angel@abc-autosalvage.com",
-  "description": "We buy vehicles in any condition — wrecked, running, high mileage, or non-starting. Free towing and same-day cash payment across Virginia.",
+  "description": "We buy vehicles in any condition — wrecked, running, high mileage, or non-starting. Free towing and same-day cash payment across North Carolina.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "15346 Blue Star Hwy",
-    "addressLocality": "Stony Creek",
-    "addressRegion": "VA",
-    "postalCode": "23882",
+    "streetAddress": "4417 US-70 BUS",
+    "addressLocality": "Clayton",
+    "addressRegion": "NC",
+    "postalCode": "27520",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 36.9012,
-    "longitude": -77.3967
+    "latitude": 35.6558,
+    "longitude": -78.4554
   },
   "openingHoursSpecification": [
     {
@@ -59,7 +59,7 @@ const businessSchema = {
   "priceRange": "$$",
   "areaServed": {
     "@type": "State",
-    "name": "Virginia"
+    "name": "North Carolina"
   },
   "sameAs": [],
   "hasOfferCatalog": {
@@ -115,20 +115,20 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "name": "ABC Autosalvage",
   "image": imageUrl,
-  "telephone": "+1-757-633-1779",
+  "telephone": "+1-919-437-8198",
   "email": "Angel@abc-autosalvage.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "15346 Blue Star Hwy",
-    "addressLocality": "Stony Creek",
-    "addressRegion": "VA",
-    "postalCode": "23882",
+    "streetAddress": "4417 US-70 BUS",
+    "addressLocality": "Clayton",
+    "addressRegion": "NC",
+    "postalCode": "27520",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 36.9012,
-    "longitude": -77.3967
+    "latitude": 35.6558,
+    "longitude": -78.4554
   },
   "url": siteUrl,
   "priceRange": "$$"
@@ -160,7 +160,7 @@ const localBusinessSchema = {
 		{imageUrl && <meta property="og:image" content={imageUrl} />}
 		{imageUrl && <meta property="og:image:width" content="1200" />}
 		{imageUrl && <meta property="og:image:height" content="630" />}
-		{imageUrl && <meta property="og:image:alt" content="ABC Autosalvage - Cash for Cars in Virginia" />}
+		{imageUrl && <meta property="og:image:alt" content="ABC Autosalvage - Cash for Cars in North Carolina" />}
 
 		<!-- ==================== TWITTER CARD ==================== -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -174,13 +174,13 @@ const localBusinessSchema = {
 		
 		<!-- AI-specific metadata for LLM crawlers -->
 		<meta name="author" content="ABC Autosalvage" />
-		<meta name="keywords" content="cash for cars Virginia, junk car buyer Stony Creek, sell my car fast, wrecked car buyer, free car towing Virginia, ABC Autosalvage, scrap car cash, auto salvage Virginia, we buy cars any condition, cash for junk cars near me" />
+		<meta name="keywords" content="cash for cars North Carolina, junk car buyer Clayton NC, sell my car fast, wrecked car buyer, free car towing North Carolina, ABC Autosalvage, scrap car cash, auto salvage NC, we buy cars any condition, cash for junk cars near me" />
 
 		<!-- ==================== GEO TARGETING ==================== -->
-		<meta name="geo.region" content="US-VA" />
-		<meta name="geo.placename" content="Stony Creek" />
-		<meta name="geo.position" content="36.9012;-77.3967" />
-		<meta name="ICBM" content="36.9012, -77.3967" />
+		<meta name="geo.region" content="US-NC" />
+		<meta name="geo.placename" content="Clayton" />
+		<meta name="geo.position" content="35.6558;-78.4554" />
+		<meta name="ICBM" content="35.6558, -78.4554" />
 		
 		<!-- Custom Fonts from Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">

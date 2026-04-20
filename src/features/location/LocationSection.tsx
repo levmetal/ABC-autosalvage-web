@@ -9,14 +9,14 @@ const contactDetails = [
   {
     icon: MapPin,
     label: 'Address',
-    value: '15346 Blue Star Hwy, Stony Creek, VA 23882',
-    href: 'https://www.google.com/maps/search/?api=1&query=15346+Blue+Star+Hwy+Stony+Creek+VA+23882',
+    value: '4417 US-70 BUS, Clayton, NC 27520',
+    href: 'https://www.google.com/maps/search/?api=1&query=4417+US-70+BUS+Clayton+NC+27520',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '(757) 633-1779',
-    href: 'tel:17576331779',
+    value: '(919) 437-8198',
+    href: 'tel:19194378198',
   },
   {
     icon: Mail,
@@ -30,7 +30,7 @@ const contactDetails = [
 
 // Fallback: use a simple search-based embed (no API key needed)
 const MAPS_SEARCH_URL =
-  'https://maps.google.com/maps?q=15346+Blue+Star+Hwy,+Stony+Creek,+VA+23882&t=&z=14&ie=UTF8&iwloc=&output=embed';
+  'https://maps.google.com/maps?q=4417+US-70+BUS,+Clayton,+NC+27520&t=&z=14&ie=UTF8&iwloc=&output=embed';
 
 export const LocationSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -140,7 +140,7 @@ export const LocationSection: React.FC = () => {
 
             {/* Get Directions CTA */}
             <a
-              href="https://www.google.com/maps/search/?api=1&query=15346+Blue+Star+Hwy+Stony+Creek+VA+23882"
+              href="https://www.google.com/maps/search/?api=1&query=4417+US-70+BUS+Clayton+NC+27520"
               target="_blank"
               rel="noopener noreferrer"
               className="group mt-8 inline-flex items-center justify-center gap-3 px-8 py-4 border border-[var(--color-primary)]/30 rounded-full hover:bg-[var(--color-primary)]/10 hover:border-[var(--color-primary)] transition-all duration-300 self-start sm:self-center lg:self-start w-full sm:w-auto"
@@ -179,7 +179,7 @@ export const LocationSection: React.FC = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="ABC Autosalvage Location - 15346 Blue Star Hwy, Stony Creek, VA 23882"
+              title="ABC Autosalvage Location - 4417 US-70 BUS, Clayton, NC 27520"
               className="w-full h-full"
             />
           </div>

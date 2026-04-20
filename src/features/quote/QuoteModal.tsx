@@ -441,7 +441,7 @@ export const QuoteModal: React.FC = () => {
               {submitError && (
                 <div className="mt-2 p-3 rounded-lg bg-red-500/10 border border-red-500/30">
                   <p className="text-xs font-bold text-red-400 uppercase tracking-wider">
-                    Failed to send. Call us at (757) 633-1779.
+                    Failed to send. Call us at (919) 437-8198.
                   </p>
                 </div>
               )}

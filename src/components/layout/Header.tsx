@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
           {/* Actions */}
           <div className="flex items-center gap-3 md:gap-6">
             <a 
-              href="tel:17576331779"
+              href="tel:19194378198"
               aria-label="Call ABC Autosalvage directly"
               className="group flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 border border-white/10 rounded-full hover:border-[var(--color-primary)]/50 transition-colors"
             >
@@ -173,11 +173,11 @@ export const Header: React.FC = () => {
 
             {/* Phone */}
             <a 
-              href="tel:17576331779"
+              href="tel:19194378198"
               className="mt-6 flex items-center gap-2 text-gray-400 hover:text-[var(--color-primary)] transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-heading font-bold uppercase tracking-wider">(757) 633-1779</span>
+              <span className="text-sm font-heading font-bold uppercase tracking-wider">(919) 437-8198</span>
             </a>
           </div>
         </div>
