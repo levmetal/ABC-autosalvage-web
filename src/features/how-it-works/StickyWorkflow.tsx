@@ -126,9 +126,9 @@ export const StickyWorkflow: React.FC = () => {
 
           <div className="space-y-[12vh] sm:space-y-[15vh] relative">
 
-            {/* Robust Vertical Progress Line Container - Simplified z-index & positioning */}
-            <div className="absolute left-6 w-[2px] top-6 bottom-6 bg-white/5 z-0">
-              <div className="progress-line-inner w-full h-0 bg-[var(--color-primary)] origin-top shadow-[0_0_15px_rgba(255,95,0,0.5)]" />
+            {/* Robust Vertical Progress Line Container - Aligned responsively with badges */}
+            <div className="absolute left-5 sm:left-6 w-[2px] top-6 bottom-6 bg-white/10 z-0">
+              <div className="progress-line-inner w-full h-0 bg-[var(--color-primary)] origin-top shadow-[0_0_15px_rgba(255,95,0,0.6)]" />
             </div>
 
             {steps.map((step, index) => (
@@ -139,10 +139,10 @@ export const StickyWorkflow: React.FC = () => {
                   opacity: activeIndex === index ? 1 : 0.20
                 }}
               >
-                {/* Step Badge - Perfectly aligned, z-index 20 keeps it in front */}
-                <div className="shrink-0 flex items-center justify-center w-12 h-12 relative z-20">
-                  <div className={`relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-all duration-500 bg-[var(--color-base)] ${activeIndex === index
-                    ? 'bg-[var(--color-primary)]/10 border-[var(--color-primary)] shadow-[0_0_20px_rgba(255,95,0,0.3)] scale-110'
+                {/* Step Badge - Opaque background to hide the line behind it */}
+                <div className="shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 relative z-20">
+                  <div className={`relative shrink-0 w-full h-full rounded-full border flex items-center justify-center transition-all duration-500 bg-[var(--color-base)] ${activeIndex === index
+                    ? 'border-[var(--color-primary)] shadow-[0_0_20px_rgba(255,95,0,0.4)] scale-110'
                     : 'border-white/10'
                     }`}>
                     <span className={`text-lg sm:text-xl font-heading font-black relative z-30 ${activeIndex === index ? 'text-[var(--color-primary)]' : 'text-white/20'}`}>
