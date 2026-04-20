@@ -36,9 +36,9 @@ export const HeroVisual: React.FC<HeroVisualProps> = ({ heroBg = heroBgPlacehold
       duration: 1
     }, "-=0.8")
     .from(buttonContainerRef.current, {
-      y: 20,
-      opacity: 0,
-      duration: 1
+      y: 30, // Just a subtle float up, NO opacity: 0 to ensure it never "disappears"
+      duration: 1.2,
+      ease: "power2.out"
     }, "-=1.0");
 
     // 3D Tilt Effect setup for the Glass Card
