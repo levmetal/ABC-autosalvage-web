@@ -50,6 +50,16 @@ export const Header: React.FC = () => {
     }
   };
 
+  const handleCallClick = (e: React.MouseEvent) => {
+    // Detect if the device is likely a mobile phone with calling capabilities
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    
+    if (!isMobile) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-call-modal'));
+    }
+  };
+
   return (
     <>
       <header 
@@ -87,6 +97,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-3 md:gap-6">
             <a 
               href="tel:19194378198"
+              onClick={handleCallClick}
               aria-label="Call ABC Autosalvage directly"
               className="group flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 border border-white/10 rounded-full hover:border-[var(--color-primary)]/50 transition-colors"
             >
@@ -174,6 +185,7 @@ export const Header: React.FC = () => {
             {/* Phone */}
             <a 
               href="tel:19194378198"
+              onClick={handleCallClick}
               className="mt-6 flex items-center gap-2 text-gray-400 hover:text-[var(--color-primary)] transition-colors"
             >
               <Phone className="w-4 h-4" />

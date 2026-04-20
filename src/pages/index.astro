@@ -11,6 +11,7 @@ import { LocationSection } from '../features/location/LocationSection';
 import { FAQSection } from '../features/faq/FAQSection';
 import { FooterCTA } from '../components/layout/FooterCTA';
 import { QuoteModal } from '../features/quote/QuoteModal';
+import { CallModal } from '../features/contact/CallModal';
 import { MobileStickyCTA } from '../components/layout/MobileStickyCTA';
 
 const optimizedHeroBg = await getImage({ src: heroBgAsset, format: 'webp', width: 2000, quality: 80 });
@@ -42,5 +43,6 @@ const optimizedHeroBg = await getImage({ src: heroBgAsset, format: 'webp', width
   {/* Global UI Layers */}
   <MobileStickyCTA client:load />
   <QuoteModal client:load />
+  <CallModal client:load />
 
 </Layout>

@@ -37,6 +37,14 @@ export const LocationSection: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
 
+  const handleCallClick = (e: React.MouseEvent) => {
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    if (!isMobile) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-call-modal'));
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate the contact card
@@ -113,6 +121,7 @@ export const LocationSection: React.FC = () => {
                 <a
                   key={item.label}
                   href={item.href}
+                  onClick={item.label === 'Phone' ? handleCallClick : undefined}
                   target={item.label === 'Address' ? '_blank' : undefined}
                   rel={item.label === 'Address' ? 'noopener noreferrer' : undefined}
                   className="group flex items-start gap-5 p-4 rounded-xl border border-white/5 bg-white/[0.05] hover:border-[var(--color-primary)]/50 transition-all duration-300"
