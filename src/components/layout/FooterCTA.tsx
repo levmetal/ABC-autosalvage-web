@@ -33,32 +33,33 @@ export const FooterCTA: React.FC = () => {
       </div>
 
       {/* Footer Branding & Social - Refined for Elegance & Distinction */}
-      <footer className="w-full mt-16 px-6 lg:px-12 z-10 bg-[var(--color-base-surface)] border-t border-white/5 relative overflow-hidden">
+      <footer className="w-full mt-24 px-6 lg:px-12 z-10 bg-[var(--color-base-surface)] border-t border-white/5 relative overflow-hidden">
         
         {/* Subtle accent line on top */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent" />
 
-        <div className="max-w-4xl mx-auto flex flex-col items-center pt-16 pb-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col items-center pt-20 pb-12">
           
-          {/* Logo - Central focus */}
-          <a href="/" className="mb-10 transition-transform duration-500 hover:scale-105">
+          {/* Logo - Central focus with improved sizing and vertical balance */}
+          <a href="/" className="mb-12 transition-transform duration-500 hover:scale-105 flex justify-center">
             <img
               src={logo.src}
               alt="ABC Autosalvage Logo"
-              className="h-9 md:h-12 w-auto object-contain opacity-90"
+              className="h-10 md:h-14 w-auto object-contain opacity-90 filter brightness-110"
             />
           </a>
 
-          {/* Navigation Links - Clean horizontal list */}
-          <nav className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 mb-10">
-            <a href="/privacy-policy" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Privacy Policy</a>
-            <a href="/terms-of-service" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Terms of Service</a>
-            <a href="#location" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Contact</a>
+          {/* Navigation Links - Balanced horizontal list with improved spacing */}
+          <nav className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-4 mb-12">
+            <a href="/privacy-policy" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Privacy Policy</a>
+            <a href="/terms-of-service" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Terms of Service</a>
+            <a href="#location" className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-gray-400 hover:text-[var(--color-primary)] transition-all duration-300">Contact</a>
           </nav>
 
-          {/* Copyright - Subtle footer signature */}
-          <p className="text-gray-600 text-[9px] font-black uppercase tracking-[0.3em] text-center">
-            © {new Date().getFullYear()} ABC Autosalvage Virginia. <span className="hidden sm:inline">All Rights Reserved.</span>
+          {/* Copyright - Precise footer signature with correct location */}
+          <p className="text-gray-600 text-[9px] font-black uppercase tracking-[0.35em] text-center max-w-lg leading-loose">
+            © {new Date().getFullYear()} ABC Autosalvage North Carolina. <br className="sm:hidden" />
+            <span className="opacity-60">All Rights Reserved.</span>
           </p>
 
         </div>
