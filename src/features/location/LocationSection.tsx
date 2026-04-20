@@ -21,8 +21,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'Angel@abc-autosalvage.com',
-    href: 'mailto:Angel@abc-autosalvage.com',
+    value: 'Angel@abcautosalvage.us',
+    href: 'mailto:Angel@abcautosalvage.us',
   },
 ];
 

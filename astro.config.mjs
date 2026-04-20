@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://abc-autosalvage.com',
+  site: 'https://abcautosalvage.us',
   integrations: [react(), sitemap()],
 
   vite: {

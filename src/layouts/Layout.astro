@@ -15,14 +15,14 @@ const {
 	title, 
 	description = "Turn your non-running or wrecked vehicle into instant cash. ABC Autosalvage offers top dollar, professional recovery, and free towing across North Carolina. No hidden fees — just fast, honest service.", 
 	image = "/og-image.jpg",
-	url = "https://abc-autosalvage.com"
+	url = "https://abcautosalvage.us"
 } = Astro.props;
 
 // Optimize Branding Icons (Compression from 468KB to ~20KB)
 const optimizedAppleIcon = await getImage({ src: appleIconAsset, width: 180, height: 180, format: 'png', quality: 'high' });
 const optimizedFavicon192 = await getImage({ src: favicon192Asset, width: 192, height: 192, format: 'png', quality: 'high' });
 
-const siteUrl = import.meta.env.SITE || "https://abc-autosalvage.com";
+const siteUrl = import.meta.env.SITE || "https://abcautosalvage.us";
 const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
 const imageUrl = image && image.startsWith('http') ? image : image ? `${siteUrl}${image}` : "";
 
@@ -34,7 +34,7 @@ const businessSchema = {
   "image": imageUrl,
   "url": siteUrl,
   "telephone": "+1-919-437-8198",
-  "email": "Angel@abc-autosalvage.com",
+  "email": "Angel@abcautosalvage.us",
   "description": "We buy vehicles in any condition — wrecked, running, high mileage, or non-starting. Free towing and same-day cash payment across North Carolina.",
   "address": {
     "@type": "PostalAddress",
@@ -123,7 +123,7 @@ const localBusinessSchema = {
   "name": "ABC Autosalvage",
   "image": imageUrl,
   "telephone": "+1-919-437-8198",
-  "email": "Angel@abc-autosalvage.com",
+  "email": "Angel@abcautosalvage.us",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4417 US-70 BUS",

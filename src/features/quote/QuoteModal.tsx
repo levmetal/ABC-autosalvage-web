@@ -78,7 +78,7 @@ export const QuoteModal: React.FC = () => {
 
 
     try {
-      const targetEmail = import.meta.env.PUBLIC_FORMSUBMIT_EMAIL || 'miguel@abc-autosalvage.com';
+      const targetEmail = import.meta.env.PUBLIC_FORMSUBMIT_EMAIL || 'miguel@abcautosalvage.us';
       const endpoint = `https://formsubmit.co/ajax/${targetEmail}`;
 
       const formBody = new FormData();
