@@ -87,6 +87,8 @@ export const HeroVisual: React.FC<HeroVisualProps> = ({ heroBg = heroBgPlacehold
         <img 
           src={heroBg} 
           alt="" 
+          width="1600"
+          height="1000"
           role="presentation"
           fetchpriority="high"
           loading="eager"

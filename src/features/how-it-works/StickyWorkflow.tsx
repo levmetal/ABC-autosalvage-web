@@ -104,7 +104,13 @@ export const StickyWorkflow: React.FC = () => {
                 className={`absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] flex items-center justify-center ${activeIndex === index ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-[1.05] blur-lg'
                   }`}
               >
-                <img src={step.image} alt={step.title} className="max-w-none w-full h-full object-cover origin-center transform transition-transform duration-[10s] hover:scale-110 object-center mix-blend-luminosity opacity-60" />
+                <img 
+                  src={step.image} 
+                  alt={step.title} 
+                  width="800"
+                  height="500"
+                  className="max-w-none w-full h-full object-cover origin-center transform transition-transform duration-[10s] hover:scale-110 object-center mix-blend-luminosity opacity-60" 
+                />
                 {/* Color tint overlay */}
                 <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-20"></div>
                 {/* Vignette */}
