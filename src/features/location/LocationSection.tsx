@@ -37,6 +37,16 @@ export const LocationSection: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMapVisible, setIsMapVisible] = React.useState(false);
 
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  const handleCallClick = (e: React.MouseEvent) => {
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    if (!isMobile) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-call-modal'));
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
