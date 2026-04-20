@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import heroBg from '../../assets/images/hero/hero-background.jpeg?url';
+import heroBgPlaceholder from '../../assets/images/hero/hero-background.jpeg?url';
 
-export const HeroVisual: React.FC = () => {
+interface HeroVisualProps {
+  heroBg?: string;
+}
+
+export const HeroVisual: React.FC<HeroVisualProps> = ({ heroBg = heroBgPlaceholder }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const title1Ref = useRef<HTMLHeadingElement>(null);
   const title2Ref = useRef<HTMLHeadingElement>(null);

@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import appleIconAsset from '../assets/images/branding/apple-touch-icon.png';
+import favicon192Asset from '../assets/images/branding/favicon-192.png';
 
 interface Props {
 	title: string;
@@ -14,6 +17,10 @@ const {
 	image = "/og-image.jpg",
 	url = "https://abc-autosalvage.com"
 } = Astro.props;
+
+// Optimize Branding Icons (Compression from 468KB to ~20KB)
+const optimizedAppleIcon = await getImage({ src: appleIconAsset, width: 180, height: 180, format: 'png', quality: 'high' });
+const optimizedFavicon192 = await getImage({ src: favicon192Asset, width: 192, height: 192, format: 'png', quality: 'high' });
 
 const siteUrl = import.meta.env.SITE || "https://abc-autosalvage.com";
 const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -142,8 +149,8 @@ const localBusinessSchema = {
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
-		<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=3" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
+		<link rel="icon" type="image/png" sizes="192x192" href={optimizedFavicon192.src} />
+		<link rel="apple-touch-icon" href={optimizedAppleIcon.src} />
 		<link rel="shortcut icon" href="/favicon.ico?v=3" />
 		<meta name="generator" content={Astro.generator} />
 		
