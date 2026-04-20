@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { getImage } from 'astro:assets';
 import appleIconAsset from '../assets/images/branding/apple-touch-icon.png';
 import favicon192Asset from '../assets/images/branding/favicon-192.png';
+import heroBgAsset from '../assets/images/hero/hero-background.jpeg';
 
 interface Props {
 	title: string;
@@ -21,6 +22,9 @@ const {
 // Optimize Branding Icons (Compression from 468KB to ~20KB)
 const optimizedAppleIcon = await getImage({ src: appleIconAsset, width: 180, height: 180, format: 'png', quality: 'high' });
 const optimizedFavicon192 = await getImage({ src: favicon192Asset, width: 192, height: 192, format: 'png', quality: 'high' });
+
+// Optimize Hero Background for Preloading (Synchronized with HeroVisual.tsx)
+const optimizedHeroBg = await getImage({ src: heroBgAsset, width: 1600, height: 1000, format: 'webp', quality: 'high' });
 
 const siteUrl = import.meta.env.SITE || "https://abcautosalvage.us";
 const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -156,6 +160,9 @@ const localBusinessSchema = {
 		
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- Preload Critical Assets -->
+		<link rel="preload" href={optimizedHeroBg.src} as="image" fetchpriority="high" />
 
 		<!-- ==================== OPEN GRAPH (Facebook, LinkedIn, etc.) ==================== -->
 		<meta property="og:type" content="website" />

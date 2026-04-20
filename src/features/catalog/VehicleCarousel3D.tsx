@@ -9,35 +9,35 @@ const vehicles = [
     id: 1,
     title: "Total Loss / Wrecked",
     description: "Major collision damage? Framework bent? We'll safely tow it away for free and hand you cash.",
-    image: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?q=80&w=640&auto=format&fit=crop", // Crashed car style
+    image: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?q=80&w=400&auto=format&fit=crop", // Crashed car style
     badge: "Maximum Payout"
   },
   {
     id: 2,
     title: "Mechanical Failure",
     description: "Blown engine? Broken transmission? Don't pay for ridiculous repairs. Sell it as-is.",
-    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=640&auto=format&fit=crop", // Engine/mechanic
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=400&auto=format&fit=crop", // Engine/mechanic
     badge: "As Is"
   },
   {
     id: 3,
     title: "High Mileage",
     description: "If the odometer is maxed out but it still runs (or barely does), we're buying.",
-    image: "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=640&auto=format&fit=crop", // Dashboard speedometer
+    image: "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=400&auto=format&fit=crop", // Dashboard speedometer
     badge: "Any Mileage"
   },
   {
     id: 4,
     title: "Classic & Projects",
     description: "That restoration project you never finished is still worth top dollar to our network.",
-    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=640&auto=format&fit=crop", // Classic car
+    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=400&auto=format&fit=crop", // Classic car
     badge: "Collector Value"
   },
   {
     id: 5,
     title: "Used / Good Condition",
     description: "Ready to upgrade? We pay a premium for running cars in good condition, faster than a dealership.",
-    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=640&auto=format&fit=crop", // Clean sports/sedan car
+    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400&auto=format&fit=crop", // Clean sports/sedan car
     badge: "Premium Offer"
   }
 ];
@@ -153,7 +153,14 @@ export const VehicleCarousel3D: React.FC = () => {
               {/* Image */}
               <div className="absolute inset-0 z-0 bg-[#111]">
                 {/* Adding a loading fallback color before image loads */}
-                <img src={vehicle.image} alt={vehicle.title} className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 opacity-70 group-hover:opacity-100 group-hover:scale-105" loading="lazy" />
+                <img 
+                  src={vehicle.image} 
+                  alt={vehicle.title} 
+                  width="400"
+                  height="600"
+                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 opacity-70 group-hover:opacity-100 group-hover:scale-105" 
+                  loading="lazy" 
+                />
                 {/* Emerald Overlay */}
                 <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 {/* Dark Vignette */}

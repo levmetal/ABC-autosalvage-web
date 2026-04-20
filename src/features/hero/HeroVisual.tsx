@@ -16,33 +16,28 @@ export const HeroVisual: React.FC<HeroVisualProps> = ({ heroBg = heroBgPlacehold
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    // GSAP Text Reveal Animation
+    // GSAP Text Reveal Animation - Optimized for LCP (starts visible, then animates)
     const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 1.2 } });
 
-    gsap.set([title1Ref.current, title2Ref.current, subtitleRef.current, metricsRef.current, buttonContainerRef.current], { 
-      y: 50, 
-      opacity: 0
-    });
-
-    tl.to([title1Ref.current, title2Ref.current], {
-      y: 0,
-      opacity: 1,
+    tl.from([title1Ref.current, title2Ref.current], {
+      y: 30,
+      opacity: 0,
       stagger: 0.1,
       delay: 0.1
     })
-    .to(subtitleRef.current, {
-      y: 0,
-      opacity: 1,
+    .from(subtitleRef.current, {
+      y: 20,
+      opacity: 0,
       duration: 1
     }, "-=0.8")
-    .to(metricsRef.current, {
-      y: 0,
-      opacity: 1,
+    .from(metricsRef.current, {
+      y: 20,
+      opacity: 0,
       duration: 1
     }, "-=0.8")
-    .to(buttonContainerRef.current, {
-      y: 0,
-      opacity: 1,
+    .from(buttonContainerRef.current, {
+      y: 20,
+      opacity: 0,
       duration: 1
     }, "-=1.0");
 
@@ -87,11 +82,16 @@ export const HeroVisual: React.FC<HeroVisualProps> = ({ heroBg = heroBgPlacehold
       id="hero"
       className="relative min-h-[85vh] pt-20 pb-16 lg:pt-28 px-6 xl:px-12 flex items-center bg-[#050608] overflow-hidden"
     >
-      {/* Dynamic Background Image */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      {/* Dynamic Background Image - Optimized with real img tag for LCP */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroBg} 
+          alt="" 
+          role="presentation"
+          fetchpriority="high"
+          loading="eager"
+          className="w-full h-full object-cover object-center opacity-60"
+        />
         <div className="absolute inset-0 bg-[#050608]/40"></div>
         <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-[0.04]"></div>
       </div>

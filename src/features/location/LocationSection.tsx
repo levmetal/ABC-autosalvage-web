@@ -35,15 +35,25 @@ const MAPS_SEARCH_URL =
 export const LocationSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<HTMLDivElement>(null);
+  const [isMapVisible, setIsMapVisible] = React.useState(false);
 
-  const handleCallClick = (e: React.MouseEvent) => {
-    const isMobile = window.matchMedia('(pointer: coarse)').matches;
-    if (!isMobile) {
-      e.preventDefault();
-      window.dispatchEvent(new CustomEvent('open-call-modal'));
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsMapVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' } // Start loading 200px before it enters viewport
+    );
+
+    if (mapRef.current) {
+      observer.observe(mapRef.current);
     }
-  };
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -93,7 +103,7 @@ export const LocationSection: React.FC = () => {
       className="relative bg-[var(--color-base)] py-20 sm:py-28 px-6 sm:px-12 lg:px-16 overflow-hidden"
     >
       {/* Ambient emerald glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-[var(--color-primary)] rounded-full blur-[200px] opacity-[0.04] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-[var(--color-primary)] rounded-full blur-[120px] opacity-[0.04] pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
@@ -164,7 +174,7 @@ export const LocationSection: React.FC = () => {
           {/* Map Container */}
           <div
             ref={mapRef}
-            className="relative group rounded-2xl overflow-hidden border border-white/5 hover:border-[var(--color-primary)]/50 transition-all duration-500 shadow-[0_0_40px_rgba(0,0,0,0.5)] min-h-[350px] sm:min-h-[400px] lg:min-h-0"
+            className="relative group rounded-2xl overflow-hidden border border-white/5 hover:border-[var(--color-primary)]/50 transition-all duration-500 shadow-[0_0_40px_rgba(0,0,0,0.5)] min-h-[350px] sm:min-h-[400px] lg:min-h-0 bg-black/20"
           >
             {/* Emerald tint overlay - restored for brand alignment */}
             <div className="absolute inset-0 bg-[var(--color-primary)] mix-blend-overlay opacity-10 pointer-events-none z-10 group-hover:opacity-15 transition-opacity duration-500" />
@@ -175,22 +185,28 @@ export const LocationSection: React.FC = () => {
             {/* Bottom gradient fade */}
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[var(--color-base)] to-transparent z-10 pointer-events-none" />
 
-            {/* Google Maps Embed */}
-            <iframe
-              src={MAPS_SEARCH_URL}
-              width="100%"
-              height="100%"
-              style={{ 
-                border: 0, 
-                minHeight: '400px', 
-                filter: 'grayscale(0.5) invert(0.9) hue-rotate(-20deg) saturate(2) brightness(1.1) contrast(1.1)' 
-              }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="ABC Autosalvage Location - 4417 US-70 BUS, Clayton, NC 27520"
-              className="w-full h-full"
-            />
+            {/* Google Maps Embed - Conditionally loaded to save 350KB+ on initial load */}
+            {isMapVisible ? (
+              <iframe
+                src={MAPS_SEARCH_URL}
+                width="100%"
+                height="100%"
+                style={{ 
+                  border: 0, 
+                  minHeight: '400px', 
+                  filter: 'grayscale(0.5) invert(0.9) hue-rotate(-20deg) saturate(2) brightness(1.1) contrast(1.1)' 
+                }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="ABC Autosalvage Location - 4417 US-70 BUS, Clayton, NC 27520"
+                className="w-full h-full animate-in fade-in duration-1000"
+              />
+            ) : (
+              <div className="w-full h-full min-h-[400px] flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-[var(--color-primary)]/20 border-t-[var(--color-primary)] rounded-full animate-spin" />
+              </div>
+            )}
           </div>
         </div>
       </div>
