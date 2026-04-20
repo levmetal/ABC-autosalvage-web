@@ -40,8 +40,8 @@ export const FooterCTA: React.FC = () => {
 
         <div className="max-w-[1400px] mx-auto flex flex-col items-center pt-20 pb-12">
           
-          {/* Logo - central focus with optical alignment correction (nudge left to compensate for italics) */}
-          <a href="/" className="mb-12 transition-transform duration-500 hover:scale-105 flex justify-center translate-x-[-6px]">
+          {/* Logo - central focus with optical alignment correction (nudge right to balance slanted weight) */}
+          <a href="/" className="mb-12 transition-transform duration-500 hover:scale-105 flex justify-center translate-x-[6px]">
             <img
               src={logo.src}
               alt="ABC Autosalvage Logo"
